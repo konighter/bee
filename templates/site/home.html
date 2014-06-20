@@ -1,4 +1,257 @@
 {% extends "base_page.html" %}
+{% load staticfiles %}
+{% block home%}active{% endblock %}
 {% block title %}首页{% endblock %}
-{% block content %}首页{% endblock %}
-{% block copyright %}@Copyright{% endblock %}
+{% block content %}
+
+<div class="main thirteen wide right column">
+
+<!-- 轮播 -->
+
+<div class="cycle-slideshow slideshow_wrap" data-cycle-timeout=8000 data-cycle-fx="fadeout" data-cycle-slides="> a" data-cycle-speed=1500>
+<a><img src="{% static 'images/slider/1.jpg' %}"> </a>
+<a><img src="{% static 'images/slider/2.jpg' %}"> </a>
+<a><img src="{% static 'images/slider/3.jpg' %}"></a>
+	
+	
+</div>
+
+<!-- items -->
+
+<div class="ui top attached fluid tabular menu">
+  <a class="active item" data-target="com_list">
+    找公司
+  </a>
+  <a class="item" data-target="pos_list">
+    找职位
+  </a>
+</div>
+<div id="home-content" class="ui bottom attached segment">
+
+		<div id="pos_list" class="ui selection list hide">
+			<div class="ui very relaxed divided list">
+				<div class="item">
+					<div class="content">
+						<a class="header">服务器开发工程师</a> 
+						<div class="location">[beijing]</div>
+						<div class="description">全职 / 8k-15k / 1-3年 / 本科及以上</div>
+					</div>
+					
+					<div class="right floated date">09:56发布</div>
+				</div>
+				<div class="item">
+					<div class="content">
+						<a class="header">Chicago</a>
+						<div class="description">A lovely city</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="content">
+						<a class="header">Los Angeles</a>
+						<div class="description">A lovely city</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="com_list" class="ui four items">
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> 
+					<a class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+				<div class="content">
+					<div class="name">Cute Dog</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="ui masked move up reveal image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/dog.jpg'%}"> <a
+						class="star ui corner label"> <i class="star icon"></i>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+</div>
+
+{% endblock %}
+
+
+{% block sidebar%}
+	<div id='hsidebar' class="three wide column">
+	
+	<a class="ui massive primary button">
+  <i class="add icon"></i>
+  推荐简历
+</a>
+	<div class="ui vertical menu">
+		<a class="teal item"> <i class="desktop icon"></i> 开发</a> 
+		<a class="teal item"> <i class="help icon"></i> 产品</a>
+		<a class="teal item"> <i class="bug icon"></i> 测试</a>
+		<a class="teal item"> <i class="coffee icon"></i> 管理</a>
+		<a class="teal item"> <i class="browser icon"></i> 运维</a>l
+		<a class="teal item"> <i class="globe icon"></i> 市场</a>
+		<a class="teal item"> <i class="users icon"></i> 高管</a>
+	</div>
+</div>
+{% endblock %}
+
+{% block cscript %}
+	<script type="text/javascript" src="{% static 'js/jquery.cycle2.min.js' %}"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		
+			 $('.tabular.menu .item').click(function(){
+				 
+				 $('#home-content').children('div').hide();
+				 
+				 var target = $(this).attr('data-target');
+				 $('#'+target).show();
+			 });
+		}
+			
+		);
+	</script>
+
+{% endblock %} 
+
+{% block main-couj%}
+
+
+
+{% endblock %}
+

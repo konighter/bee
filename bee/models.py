@@ -24,9 +24,9 @@ class Candidate(models.Model):
 
 class Position(models.Model):
     name   = models.CharField(max_length=50)
-    type   = models.CharField(max_length=50)
+    classify   = models.CharField(max_length=50) # 开发/测试/运维/产品/管理/高管
     base   = models.CharField(max_length=50)
-    jobtype= models.CharField(max_length=50)
+    jobtype= models.CharField(max_length=50) #全职/兼职/实习
     experience_required = models.CharField(max_length=50)
     degree_required     = models.CharField(max_length=50)
     office_address      = models.CharField(max_length=200)

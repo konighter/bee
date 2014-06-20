@@ -1,13 +1,47 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
 {% include 'base_head.html' %}
 <title>{% block title%}{% endblock %}</title>
 </head>
-<body>
-	{% block content%}{% endblock %}
+<body id='home'>
+<!-- page header start -->
+	<div class="ui page grid masthead segment">
+		<div class="row">
+			<div class="three wide column">
+				<img class="logo" src="{% static 'images/logo.png' %}">
+			</div>
+			<div class="thirteen wide column">
+				<div class=" secondary pointing ui menu">
+					<a class="item {% block home%}{% endblock %}" href="{% url 'bee:index'%}"> 首页 </a>
+					<a class="item {% block company%}{% endblock %}"> 公司 </a> 
+					<a class="item {% block position%}{% endblock %}" href="{% url 'bee:position'%}"> 职位 </a>
+					<a class="item {% block resume%}{% endblock %}"> 简历管理 </a> 
+					
+					<div class="right item search">
+						<div class="ui mini icon input ">
+							<input type="text" placeholder="搜索..."> <i class="search icon"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	{% block main-couj%}{% endblock %}
+<!-- page header end -->
+
+<!-- content start -->
+<div class="ui page grid segment">
+<div class="row">
 	{% block sidebar%}{% endblock %}
-	
+	{% block content%}{% endblock %}
+</div>
+
+</div>
+<!-- content end -->
 {% include 'base_footer.html'%}
+{% block cscript %}{% endblock %}
 </body>
 </html>

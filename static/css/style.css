@@ -1,0 +1,146 @@
+@CHARSET "UTF-8";
+/*******************************
+            Global
+*******************************/
+
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background: #FFFFFF;
+  margin: 0px;
+  padding: 0px;
+  color: #555555;
+  text-rendering: optimizeLegibility;
+  min-width: 320px;
+}
+
+
+/*******************************
+          UI Overrides
+*******************************/
+
+.ui.header {
+  font-family: 'Source Sans Pro', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.ui.header,
+h1,
+h2 {
+  font-weight: normal !important;
+}
+
+h1.ui.header {
+  font-size: 3em;
+}
+
+h4.ui.header,
+h5.ui.header,
+.ui.icon.header {
+  font-weight: bold !important;
+}
+
+.ui.button {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+a {
+  color: #009FDA;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00BAFF;
+}
+
+p a {
+  font-weight: bold;
+}
+
+.hide {
+	display: none;
+}
+/*******************************
+            Global
+*******************************/
+.ui.page.grid.segment {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.masthead.ui.page.grid.segment {
+/*  background-image: url(../images/bg.jpg);  */
+  background-color : #fafafa;
+  -webkit-background-size: cover;
+  background-size: cover;
+  margin: 0em;
+  padding-top: 1.6rem;
+  padding-bottom: 0rem;
+  overflow: hidden;
+/*  -webkit-box-shadow: 0 -20px 10px 0 rgba(0, 0, 0, 0.1) inset !important;
+  box-shadow: 0 -20px 10px 0 rgba(0, 0, 0, 0.1) inset !important;
+*/
+}
+.masthead.segment .column .menu .item{
+  	font-size: 2.6rem;
+}
+
+.cycle-slideshow img { width: 100%; height: auto }
+
+
+.ui.segment .main.column {
+	font-size:1.5rem;
+}
+
+.ui.segment .main.column .ui.menu .item {
+	font-size:2rem;
+	font-weight: bold;
+}
+
+
+.attached.segment .items .item {
+	min-height: 0rem;
+	box-shadow: none;
+	border: none;
+	margin-bottom: 1.5rem;
+}
+
+.slideshow_wrap {
+	background: none;
+	padding-bottom: 1rem;
+}
+
+#hsidebar .menu .item{
+	font-size :2rem;
+}
+
+#hsidebar .button {
+	font-size :2rem;
+}
+
+#home-content .ui.selection.list .item:hover {
+	
+	background-color: rgba(0,181,173,0.5);
+	color: rgba(0,0,0,.7);
+}
+
+.ui.list .item .content .location {
+	display: inline;
+}
+.ui.list .item .content .right.floated.date {
+	float:right;
+}
+/*
+.ui.list .item .description {
+	display:inline-block;
+	margin-top:2px;
+}
+*/
