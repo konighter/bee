@@ -50,7 +50,6 @@ h5.ui.header,
 }
 
 a {
-  color: #009FDA;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
@@ -138,9 +137,175 @@ p a {
 .ui.list .item .content .right.floated.date {
 	float:right;
 }
-/*
-.ui.list .item .description {
-	display:inline-block;
-	margin-top:2px;
+
+
+/** company.html */
+
+
+.hc_tag {
+	margin-left: 1rem;
+	overflow:hidden;
 }
-*/
+
+.hc_base{
+	margin-right: 10rem;
+	float:right;
+}
+
+.hc_base a {
+	font-size: 1.5rem;
+	
+}
+
+.hc_base a.active {
+	
+}
+
+.hc_fields {
+	margin-top:1rem;
+	margin-bottom : 2rem;
+	background-color : #fafafa; 
+	display: inline-table;
+}
+
+
+.hc_field_header ,.hc_field_content{
+	display: inline-block;
+	margin-left:1rem;
+	font-size: 1.5rem;
+}
+
+.hc_field_header {
+	text-align:center;
+	font-weight: bold;
+}
+
+.hc_field_content {
+	margin-top:1.5rem;
+	padding-bottom : 0.2rem;
+	max-width: 55rem;
+}
+
+.hc_field_content > .ui.horizontal.list > .item {
+	font-size: 1.5rem;
+	padding:0.3rem;
+}
+
+.hc_field_content > .ui.horizontal.list > .item.active {
+	background-color: #0d9572;
+	color: #ffffff;
+
+}
+
+.companys {
+	margin-left: 1rem;
+	background-color: #ffffff;
+}
+.companys > .ui.items > .item {
+	min-height: 0rem;
+	box-shadow: none;
+	border: none;
+	background-color: rgba(250,250,250,.6);
+}
+.companys > .ui.items > .item  .content > a {
+	font-size : 1.7rem;
+	display: block;
+}
+.companys > .ui.items > .item h2 {
+	padding-left:.4rem;
+}
+
+.companys > .ui.items > .item > .image > .image-overlay {
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width: 95%;
+	padding-left:1rem;
+	padding-top:.9rem;
+	padding-bottom:.9rem;
+	font-size: 1.5rem;
+	color: #ffffff;
+	background-color: rgba(0,0,0,.7);
+}
+.companys > .ui.items > .item  .content a:HOVER {
+	color: green;
+}
+
+.ctags span {
+	display: inline-block;
+	border: 1px solid #cbcbcb;
+	white-space: nowrap;
+	background-color: #fff;
+	padding:.3rem;
+	margin-top:.5rem;
+	margin-right:.5rem;
+	font-size:1.5rem;
+}
+
+.sidebar .ui.items .item {
+	padding:1.5rem;
+	min-height: 0rem;
+	box-shadow: none;
+	border: none;
+}
+
+.c_header{
+	padding-left: 1rem;
+}
+.c_header img {
+	padding : .3rem;
+	border: 3px solid #019675;
+}
+.c_intro {
+	font-size: 2rem;
+	padding-left:2rem;	
+}
+
+.c_intro .ui.header .sub.header {
+	font-size: .8em;
+}
+
+.c_intro .description {
+	padding-left:.6rem;
+	font-size: .7em;
+}
+.c_info {
+	margin-left: 3rem;
+	font-size: 2rem;
+}
+.c_info > div {
+	margin-bottom: 4rem;
+}
+.c_info .ui.label{
+	font-size: 2rem;
+}
+.c_prod > div {
+	margin-top: 1rem;
+}
+.c_positons ul {
+	list-style: none;
+	padding-left: 1rem;
+}
+.c_positons ul li {
+	display: block;
+	margin-top:1rem;
+	margin-bottom: 2rem;
+	margin-left: .3rem;
+	padding-top : .6rem;
+	padding-bottom : .6rem;
+	padding-left:2rem;
+	border-left: 3px solid #91cebe;
+	transition : color 0.3s , background-color 0.3s;
+}
+.c_positons ul li:HOVER{
+	background-color: #91cebe;
+	color: #ffffff;
+}
+.c_positons .description{
+	font-size: 1.5rem;
+}
+
+.c_positons .pub_date {
+	font-size: 1.5rem;
+	float: right;
+}

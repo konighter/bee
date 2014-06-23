@@ -1,0 +1,229 @@
+{% extends "base_page.html" %}
+{% load staticfiles %}
+{% block company%}active{% endblock %}
+{% block title%} 找公司 {% endblock %}
+{% block sidebar%}
+	<div class="eleven wide column">
+		<div class="hc_tag">
+			<div class="hc_base">
+				<div class="ui divided horizontal list">
+				  <div class="item"><i class="map marker icon"></i><a>北京</a></div>
+				  <div class="item"><i class="map marker icon"></i><a>上海</a></div>
+				  <div class="item"><i class="map marker icon"></i><a>深圳</a></div>
+				  <div class="item"><i class="map marker icon"></i><a>杭州</a></div>
+				</div>
+			</div>
+			<div class="hc_fields">
+			
+			<table>
+				<tr>
+					<td><div class="hc_field_header">发展阶段:</div></td>
+					<td>
+						<div class="hc_field_content">
+						<div class="ui horizontal list">
+						  <div class="item active">初创型</div>
+						  <div class="item">成长型</div>
+						  <div class="item">成熟型</div>
+						  <div class="item">已上市</div>
+						</div>
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td><div class="hc_field_header">行业领域:</div></td>
+					<td>
+						<div class="hc_field_content">
+						<div class="ui horizontal list">
+						  <div class="item active">移动互联网</div>
+						  <div class="item">电子商务</div>
+						  <div class="item">社交</div>
+						  <div class="item">企业服务</div>
+						  <div class="item">O2O</div>
+						  <div class="item">教育</div>
+						  <div class="item">文化艺术</div>
+						  <div class="item">电子商务</div>
+						  <div class="item">社交</div>
+						  <div class="item">企业服务</div>
+						  <div class="item">O2O</div>
+						  <div class="item">教育</div>
+						  <div class="item">文化艺术</div>
+						</div>
+					</div>
+					</td>
+				
+				</tr>
+			</table>
+			
+			</div>
+		</div>
+		
+		<div class="companys">
+			<div class="ui three items">
+			<div class="item">
+				<h2>高大上,欢迎你</h2>
+				<a class="image" href="{% url 'bee:company_info' 3 %}" >
+				
+					<img src="{% static 'images/logo_default.png'%}"> 
+					<div class="image-overlay">
+							<div>企业erp,HR sources</div>
+							<div>北京,成长型</div>
+					</div>
+				</a>
+				<div class="content">
+					<a>产品经理</a>
+					<a>java工程师</a>
+					<div class="ui divider"></div>
+					<div class="ctags">
+						<span>732</span> <span>美好加油</span> <span>美女多多</span> <span>福利好好</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<h2>高大上,欢迎你</h2>
+				<a class="image" href="{% url 'bee:company_info' 3 %}">
+				
+					<img src="{% static 'images/logo_default.png'%}"> 
+					<div class="image-overlay">
+							<div>企业erp,HR sources</div>
+							<div>北京,成长型</div>
+					</div>
+				</a>
+				<div class="content">
+					<a>产品经理</a>
+					<a>java工程师</a>
+					<div class="ui divider"></div>
+					<div class="ctags">
+						<span>732</span> <span>美好加油</span> <span>美女多多</span> <span>福利好好</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<h2>高大上,欢迎你</h2>
+				<div class="image">
+				
+					<img src="{% static 'images/logo_default.png'%}"> 
+					<div class="image-overlay">
+							<div>企业erp,HR sources</div>
+							<div>北京,成长型</div>
+					</div>
+				</div>
+				<div class="content">
+					<a>产品经理</a>
+					<a>java工程师</a>
+					<div class="ui divider"></div>
+					<div class="ctags">
+						<span>732</span> <span>美好加油</span> <span>美女多多</span> <span>福利好好</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<h2>高大上,欢迎你</h2>
+				<div class="image">
+				
+					<img src="{% static 'images/logo_default.png'%}"> 
+					<div class="image-overlay">
+							<div>企业erp,HR sources</div>
+							<div>北京,成长型</div>
+					</div>
+				</div>
+				<div class="content">
+					<a>产品经理</a>
+					<a>java工程师</a>
+					<div class="ui divider"></div>
+					<div class="ctags">
+						<span>732</span> <span>美好加油</span> <span>美女多多</span> <span>福利好好</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<h2>高大上,欢迎你</h2>
+				<div class="image">
+				
+					<img src="{% static 'images/logo_default.png'%}"> 
+					<div class="image-overlay">
+							<div>企业erp,HR sources</div>
+							<div>北京,成长型</div>
+					</div>
+				</div>
+				<div class="content">
+					<a>产品经理</a>
+					<a>java工程师</a>
+					<div class="ui divider"></div>
+					<div class="ctags">
+						<span>732</span> <span>美好加油</span> <span>美女多多</span> <span>福利好好</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<h2>高大上,欢迎你</h2>
+				<div class="image">
+				
+					<img src="{% static 'images/logo_default.png'%}"> 
+					<div class="image-overlay">
+							<div>企业erp,HR sources</div>
+							<div>北京,成长型</div>
+					</div>
+				</div>
+				<div class="content">
+					<a>产品经理</a>
+					<a>java工程师</a>
+					<div class="ui divider"></div>
+					<div class="ctags">
+						<span>732</span> <span>美好加油</span> <span>美女多多</span> <span>福利好好</span>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<h2>高大上,欢迎你</h2>
+				<div class="image">
+				
+					<img src="{% static 'images/logo_default.png'%}"> 
+					<div class="image-overlay">
+							<div>企业erp,HR sources</div>
+							<div>北京,成长型</div>
+					</div>
+				</div>
+				<div class="content">
+					<a>产品经理</a>
+					<a>java工程师</a>
+					<div class="ui divider"></div>
+					<div class="ctags">
+						<span>732</span> <span>美好加油</span> <span>美女多多</span> <span>福利好好</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		</div>
+		
+	</div>
+{% endblock %}
+
+{% block content%}
+<div class="five wide column">
+	<div class="sidebar">
+		<div class="ui one items">
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/logo_default.png'%}"> 
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/subject280.jpg'%}"> 
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/subject280.jpg'%}"> 
+				</div>
+			</div>
+			<div class="item">
+				<div class="image">
+					<img src="{% static 'images/subject280.jpg'%}"> 
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+{% endblock %}
