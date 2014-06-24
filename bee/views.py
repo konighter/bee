@@ -15,3 +15,6 @@ def company(request):
 
 def company_info(request,company_id):
     return render_to_response('site/company_info.html')
+
+def position_info(request, position_id):
+    return render_to_response('site/position_info.html')

@@ -68,7 +68,7 @@
 				<div class="c_positons">
 					<div class="ui red ribbon label">招聘职位</div>
 					<ul>
-						<li>
+						<li data-url="{% url 'bee:position_info' 3 %}">
 						<div class="pub_date">9小时前</div>
 							<div class="header">
 								java工程师
@@ -94,7 +94,7 @@
 							</div>
 						</li>
 						<li>
-						<div class="pub_date">9小时前</div>
+							<div class="pub_date">9小时前</div>
 							<div class="header">
 								java工程师
 								<span class="meta">
@@ -127,6 +127,13 @@
 
  {% block cscript %}
 	<script type="text/javascript" src="{% static 'js/jquery.cycle2.min.js' %}"></script>
-
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.c_positons ul li[data-url]').click(function(){
+				window.location = $(this).attr('data-url');
+			});
+			
+		});
+	</script>
 {% endblock %} 
  
