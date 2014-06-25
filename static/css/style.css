@@ -144,12 +144,31 @@ p a {
 	padding-left:1em;
 }
 
-.login.ui.grid.page.segment {
+.login.ui.grid.page {
+	margin-top: 3rem;
+	box-shadow: none;
+	height: auto;
+}
+
+.login.ui.grid.page  .container{
+	
+	padding:0% 18%;
+}
+
+.login.ui.grid.page .ui.form {
+	box-shadow: none;
 	margin-top: 3rem;
 }
 
-.login.ui.grid.page.segment .column , .login .ui.button {
+.login.ui.page.grid .column , .login .ui.button {
 	font-size : 2rem;
+}
+.login .ui.horizontal.divider, .login .ui.horizontal.divider {
+	color: inherit;
+	font-weight: normal;
+}
+.login .ui.horizontal.divider:before, .login .ui.horizontal.divider:after{
+	width: 40%
 }
 
 /** company.html */

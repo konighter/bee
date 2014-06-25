@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+{% include 'base_head.html' %}
+<title>登录</title>
+</head>
+<body>
+	{% load staticfiles %}
+	<div class="ui middle aligned page grid login">
+		<div class="container">
+			<div class="center aligned column">
+				<a href="/"> <img class="ui medium image"
+					src="{% static 'images/logo.png' %}">
+				</a>
+			</div>
+			<div class="row">
+				<div class="column">
+				<form action="{% url 'login'%}" method="post">
+					<div class="ui form segment login">
+						<div class="ui error message"></div>
+						<div class="field">
+							<label>用户名</label>
+							<div class="ui left labeled icon input">
+								<input type="text" placeholder="用户名/手机号/邮箱" name="key_username">
+								<i class="user icon"></i>
+								<div class="ui corner label">
+									<i class="asterisk icon"></i>
+								</div>
+							</div>
+						</div>
+						<div class="field">
+							<label>密码</label>
+							<div class="ui left labeled icon input">
+								<input type="password" placeholder="密码" name="key_pwd">
+								<i class="lock icon"></i>
+								<div class="ui corner label">
+									<i class="asterisk icon"></i>
+								</div>
+							</div>
+						</div>
+						<div  class="ui blue fluid submit button" >登录</div>
+						<div class="ui horizontal divider">还不是我们的用户?</div>
+
+						<div class="huge green ui labeled fluid button">
+							<i class="signup icon"></i> 注册
+						</div>
+					</div>
+</form>
+				</div>
+			</div>
+			
+
+		</div>
+	</div>
+	{% include 'base_footer.html' %}
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.ui.form.login').form({
+				key_username : {
+					identifier : 'key_username',
+					rules : [ {
+						type : 'empty',
+						prompt : '请使用用户名/手机号/邮箱登录'
+					} ]
+				},
+				key_pwd : {
+					identifier : 'key_pwd',
+					rules : [ {
+						type : 'empty',
+						prompt : '请输入密码'
+					} ]
+				},
+			}, {
+				'onSuccess' : function() {
+					$('form').submit();
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>
