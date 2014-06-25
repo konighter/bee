@@ -18,12 +18,17 @@
 					<a class="item {% block company%}{% endblock %}" href="{% url 'bee:company'%}" > 公司 </a> 
 					<a class="item {% block position%}{% endblock %}" href="{% url 'bee:position'%}"> 职位 </a>
 					<a class="item {% block resume%}{% endblock %}"> 简历管理 </a> 
-					
-					<div class="right item search">
-						<div class="ui mini icon input ">
-							<input type="text" placeholder="搜索..."> <i class="search icon"></i>
-						</div>
-					</div>
+					{% if user %}
+					<div class="ui top right pointing dropdown link item">
+			            {{ user.name }}
+			            <i class="dropdown icon"></i>
+			            <div class="menu">
+			              <a class="item">Classes</a>
+			              <a class="item">Cocktail Hours</a>
+			              <a class="item">Community</a>
+			            </div>
+			         </div>
+			         {% endif %}
 				</div>
 			</div>
 		</div>
@@ -40,6 +45,7 @@
 </div>
 
 </div>
+
 <!-- content end -->
 {% include 'base_footer.html'%}
 {% block cscript %}{% endblock %}

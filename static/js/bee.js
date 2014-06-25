@@ -12,7 +12,7 @@ bee.menu.ready = function(){
 	 // selector cache
 	  var
 	    $menuItem = $('.menu a.item, .menu .link.item'),
-	    $dropdown = $('.main.container .menu .dropdown'),
+	    $dropdown = $('.menu .dropdown'),
 	    // alias
 	    handler = {
 
@@ -25,13 +25,17 @@ bee.menu.ready = function(){
 	    } ;
 
 	  $dropdown.dropdown({
-	      on: 'hover',
-	      action: 'hide',
+	      on: 'click',
 	    }) ;
 
 	  $menuItem.on('click', handler.activate);
 }
 
+bee.login = {}
+bee.login.ready = function(){
+	
+	
+}
 bee.ready = function(){
 	bee.menu.ready();
 	

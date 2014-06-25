@@ -213,11 +213,18 @@
 
 {% block sidebar%}
 	<div id='hsidebar' class="three wide column">
-	
+{% if user %}
 	<a class="ui massive primary button">
   <i class="add icon"></i>
   推荐简历
 </a>
+{% endif%}
+{% if not user %}
+	<a class="ui massive primary button login" href="{% url 'login' %}">
+  <i class="add icon"></i>
+  登录/注册
+</a>
+{% endif%}
 	<div class="ui vertical menu">
 		<a class="teal item"> <i class="desktop icon"></i> 开发</a> 
 		<a class="teal item"> <i class="help icon"></i> 产品</a>
@@ -234,11 +241,8 @@
 	<script type="text/javascript" src="{% static 'js/jquery.cycle2.min.js' %}"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-		
 			 $('.tabular.menu .item').click(function(){
-				 
 				 $('#home-content').children('div').hide();
-				 
 				 var target = $(this).attr('data-target');
 				 $('#'+target).show();
 			 });
@@ -249,9 +253,5 @@
 
 {% endblock %} 
 
-{% block main-couj%}
 
-
-
-{% endblock %}
 

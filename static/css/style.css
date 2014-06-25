@@ -16,7 +16,7 @@ body {
   padding: 0px;
   color: #555555;
   text-rendering: optimizeLegibility;
-  min-width: 320px;
+  min-width: 1280px;
 }
 
 
@@ -138,6 +138,19 @@ p a {
 	float:right;
 }
 
+/** login.html*/
+
+.login.button {
+	padding-left:1em;
+}
+
+.login.ui.grid.page.segment {
+	margin-top: 3rem;
+}
+
+.login.ui.grid.page.segment .column , .login .ui.button {
+	font-size : 2rem;
+}
 
 /** company.html */
 
