@@ -83,8 +83,10 @@ p a {
   margin: 0em;
   padding-top: 1.6rem;
   padding-bottom: 0rem;
-  overflow: hidden;
-/*  -webkit-box-shadow: 0 -20px 10px 0 rgba(0, 0, 0, 0.1) inset !important;
+ 
+/*
+ overflow: hidden;
+  -webkit-box-shadow: 0 -20px 10px 0 rgba(0, 0, 0, 0.1) inset !important;
   box-shadow: 0 -20px 10px 0 rgba(0, 0, 0, 0.1) inset !important;
 */
 }
@@ -115,6 +117,10 @@ p a {
 .slideshow_wrap {
 	background: none;
 	padding-bottom: 1rem;
+}
+
+.slideshow_wrap  a {
+	z-index: 0 !important;
 }
 
 #hsidebar .menu .item{
@@ -151,7 +157,6 @@ p a {
 }
 
 .login.ui.grid.page  .container{
-	
 	padding:0% 18%;
 }
 
@@ -160,7 +165,9 @@ p a {
 	margin-top: 3rem;
 }
 
-.login.ui.page.grid .column , .login .ui.button {
+.login.ui.page.grid .column , .login .ui.button ,
+.join.ui.page.grid .column , .join .ui.button , 
+.join .ui.dropdown .menu .item{
 	font-size : 2rem;
 }
 .login .ui.horizontal.divider, .login .ui.horizontal.divider {
@@ -169,6 +176,16 @@ p a {
 }
 .login .ui.horizontal.divider:before, .login .ui.horizontal.divider:after{
 	width: 40%
+}
+
+/** join.html */
+.join .ui.form {
+	margin-top: 2rem;
+	box-shadow:none;
+}
+
+.join.ui.page.grid {
+	padding-top: 2rem;
 }
 
 /** company.html */

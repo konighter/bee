@@ -20,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'q2u_ttd_=s0#g^78m_$7cgd2k)w*p$)&udpe)bin3+5hvup!ja'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -90,3 +90,24 @@ STATIC_URL = '/static/'
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+
+
+
+##################
+# AUTHENTICATION #
+##################
+
+AUTH_USER_MODEL = 'bee.Staff'
+
+LOGIN_URL = '/login/'
+
+LOGOUT_URL = '/logout/'
+
+LOGIN_REDIRECT_URL = '/'
+
+############
+# SESSIONS #
+############
+
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True

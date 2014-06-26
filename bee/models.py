@@ -1,6 +1,6 @@
 #coding=utf-8
 from django.db import models
-
+from django.contrib.auth.models import AbstractUser
 class Resume(models.Model):
     id = models.BigIntegerField(primary_key=True)
     url = models.CharField(max_length=500, blank=True)
@@ -86,8 +86,7 @@ class Customer(models.Model):
     class Meta:
         db_table = 'tbl_customer'
         
-class Staff(models.Model):
-    customer = models.ForeignKey(Customer)
-    auth_id  = models.BigIntegerField()
+class Staff(AbstractUser):
+    phone    = models.CharField(max_length=50, blank=True)
     class Meta:
         db_table = 'tbl_staff'

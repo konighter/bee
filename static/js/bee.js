@@ -12,7 +12,7 @@ bee.menu.ready = function(){
 	 // selector cache
 	  var
 	    $menuItem = $('.menu a.item, .menu .link.item'),
-	    $dropdown = $('.menu .dropdown'),
+	    $dropdown = $('.ui.dropdown'),
 	    // alias
 	    handler = {
 
@@ -25,19 +25,21 @@ bee.menu.ready = function(){
 	    } ;
 
 	  $dropdown.dropdown({
-	      on: 'click',
-	    }) ;
+	      on: 'hover',
+	    });
 
 	  $menuItem.on('click', handler.activate);
 }
 
-bee.login = {}
-bee.login.ready = function(){
+bee.form = {}
+bee.form.ready = function(){
+	var $checkbox = $('.ui.checkbox');
 	
+	$checkbox.checkbox();
 	
 }
 bee.ready = function(){
 	bee.menu.ready();
-	
+	bee.form.ready();
 }
 $(document).ready(bee.ready);

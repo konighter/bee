@@ -213,13 +213,13 @@
 
 {% block sidebar%}
 	<div id='hsidebar' class="three wide column">
-{% if user %}
+{% if user.is_authenticated %}
 	<a class="ui massive primary button">
   <i class="add icon"></i>
   推荐简历
 </a>
 {% endif%}
-{% if not user %}
+{% if not user.is_authenticated %}
 	<a class="ui massive primary button login" href="{% url 'login' %}">
   <i class="add icon"></i>
   登录/注册

@@ -5,7 +5,7 @@
 {% include 'base_head.html' %}
 <title>登录</title>
 </head>
-<body>
+<body style="overflow-y:hidden">
 	{% load staticfiles %}
 	<div class="ui middle aligned page grid login">
 		<div class="container">
@@ -17,8 +17,14 @@
 			<div class="row">
 				<div class="column">
 				<form action="{% url 'login'%}" method="post">
-					<div class="ui form segment login">
-						<div class="ui error message"></div>
+					<div class="ui form segment login {% if error%} error {% endif%}">
+						<div class="ui error message">
+							{% if error %} 
+								<ul class="list">
+									<li>{{ msg }}</li>
+								</ul>
+							{% endif%}
+						</div>
 						<div class="field">
 							<label>用户名</label>
 							<div class="ui left labeled icon input">
@@ -39,12 +45,17 @@
 								</div>
 							</div>
 						</div>
+						<div class="inline field">
+								<div class="ui checkbox">
+									<input type="checkbox" name="fixme"> <label>2周免登录</label>
+								</div>
+							</div>
 						<div  class="ui blue fluid submit button" >登录</div>
 						<div class="ui horizontal divider">还不是我们的用户?</div>
 
-						<div class="huge green ui labeled fluid button">
+						<a class="huge green ui labeled fluid button" href="{% url 'join'%}">
 							<i class="signup icon"></i> 注册
-						</div>
+						</a>
 					</div>
 </form>
 				</div>

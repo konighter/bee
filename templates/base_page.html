@@ -18,16 +18,30 @@
 					<a class="item {% block company%}{% endblock %}" href="{% url 'bee:company'%}" > 公司 </a> 
 					<a class="item {% block position%}{% endblock %}" href="{% url 'bee:position'%}"> 职位 </a>
 					<a class="item {% block resume%}{% endblock %}"> 简历管理 </a> 
-					{% if user %}
-					<div class="ui top right pointing dropdown link item">
-			            {{ user.name }}
+					{% if user.is_authenticated %}
+					<div class="right item">
+						<div class="ui top right inline dropdown ">
+						 {{ user.username }}
 			            <i class="dropdown icon"></i>
 			            <div class="menu">
-			              <a class="item">Classes</a>
-			              <a class="item">Cocktail Hours</a>
-			              <a class="item">Community</a>
+			              <a class="item">工作台</a>
+			              <a class="item">个人中心</a>
+			              <a class="item">退出登录</a>
 			            </div>
 			         </div>
+					</div>
+					
+				<!--  
+					<div class="ui top right pointing dropdown link item">
+						 <div class="text">{{ user.username }}</div>
+			            <i class="dropdown icon"></i>
+			            <div class="menu">
+			              <a class="item">工作台</a>
+			              <a class="item">个人中心</a>
+			              <a class="item">退出登录</a>
+			            </div>
+			         </div>
+			        -->
 			         {% endif %}
 				</div>
 			</div>

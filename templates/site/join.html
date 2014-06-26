@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+{% include 'base_head.html' %}
+<title>登录</title>
+</head>
+<body>
+	{% load staticfiles %}
+	<div class="ui middle aligned page grid join">
+		<div class="container">
+			<div class="center aligned column">
+				<a href="/"> <img class="ui medium image"
+					src="{% static 'images/logo.png' %}">
+				</a>
+			</div>
+			<div class="row">
+				<div class="column">
+					<form action="{% url 'join'%}" method="post">
+						<div class="ui form join">
+							<div class="ui error message"></div>
+							<div class="two fields">
+								<div class="field">
+									<label>中文名字</label> <input placeholder="中文名字" name="cn_name"
+										type="text">
+								</div>
+								<div class="field">
+									<label>英文名字</label> <input placeholder="英文名字" name=”en_name“
+										type="text">
+								</div>
+							</div>
+							<div class="field">
+								<label>性别</label>
+								<div class="ui fluid selection dropdown">
+									<div class="text">选择</div>
+									<i class="dropdown icon"></i> <input type="hidden"
+										name="gender">
+									<div class="menu">
+										<div class="item" data-value="male">男</div>
+										<div class="item" data-value="female">女</div>
+									</div>
+								</div>
+							</div>
+							<div class="field">
+								<label>Password</label> <input type="password" name="password"
+									placeholder="密码">
+							</div>
+							<div class="field">
+								<label>email</label> <input placeholder="email" name="email"
+									type="text">
+							</div>
+							<div class="field">
+								<label>手机号</label> <input type="text" name="mphone">
+							</div>
+							
+							<div class="inline field">
+								<div class="ui checkbox">
+									<input type="checkbox" name="agree"> <label>同意平台用户协议</label>
+								</div>
+							</div>
+							<div class="ui blue submit button">注册</div>
+						</div>
+
+
+					</form>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	{% include 'base_footer.html' %}
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.ui.form.join').form({
+				cn_name : {
+					identifier : 'cn_name',
+					rules : [ {
+						type : 'empty',
+						prompt : '请使用真实姓名,平台实行实名制'
+					} ]
+				},
+				password : {
+					identifier : 'password',
+					rules : [ 
+					            {
+									type : 'empty',
+									prompt : '请输入密码'
+								},
+								{
+						          type   : 'length[6]',
+						          prompt : '请输入至少6位密码'
+						        } 
+							]
+				},
+				gender : {
+					identifier : 'gender',
+					rules : [ {
+						type : 'empty',
+						prompt : '女同志有特殊福利哦！',
+					} ]
+				},
+				email : {
+					identifier : 'email',
+					rules : [ {
+						type : 'email',
+						prompt : '需要您的邮箱,保证帐号安全滴',
+					} ]
+				},
+				mphone : {
+					identifier : 'mphone',
+					rules : [ {
+						type   : 'length[11]',
+						prompt : '留下个手机号吧,好方便服务您',
+					} ]
+				},
+				agree : {
+					identifier : 'agree',
+					rules : [ {
+						type : 'checked',
+						prompt:'请勾选用户协议',
+					} ]
+				},
+			}, {
+				'onSuccess' : function() {
+					$('form').submit();
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>
