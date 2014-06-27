@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'raccoon.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
+    url(r'^console/', include('console.urls',namespace='console')),
     url(r'^', include('bee.urls',namespace='bee')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^login/$', login_view.LoginView.as_view() , name='login'),

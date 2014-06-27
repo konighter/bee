@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background: #FFFFFF;
+  margin: 0px;
+  padding: 0px;
+  color: rgba(85,85,85,.8);
+  text-rendering: optimizeLegibility;
+  min-width: 1280px;
+}
+
+#wrap-all {
+	position : relative;
+}
+
+.left_menu_wrap {
+	color: rgba(250,250,250,.8);
+	width: 220px;
+	height:100%;
+	position: absolute;
+	z-index: 1031;
+	top: 0;
+	left: 0;
+	background: rgba(57,57,57,.8);
+}
+
+.left_menu_wrap  .left_menu_footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height:50px;
+	padding: 0 10px;
+	
+}
+
+
+
+.right_content {
+	margin-left: 220px;
+}
