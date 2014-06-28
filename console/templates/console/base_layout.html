@@ -1,39 +1,95 @@
 <!DOCTYPE html>
 <html ng-app>
 <head>
-<meta charset="UTF-8">
-<title>{{title}}</title>
-{% load staticfiles %}  
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% load staticfiles %}
 
-<link href="{% static 'semantic/css/semantic.css' %}" rel="stylesheet">
-<link href="{% static 'console/style.css' %}" rel="stylesheet">
+    <link href="{% static 'semantic/css/semantic.css' %}" rel="stylesheet">
+    <link href="{% static 'console/style.css' %}" rel="stylesheet">
 </head>
 <body>
 
-<header>
-	<div>
-		<a>nihao!!</a>
-	</div>
+<header class="ui grid">
+
+        <a class="logo">
+            ikris
+        </a>
+
 </header>
 
 <div id="wrap-all">
-<div class="left_menu_wrap">
-232342
-{% block left_menu%}
-{% endblock %}
-<ul class="left_menu_footer">
-	<li>324</li>
-</ul>
-</div>
-<div class="right_content">
-2342
-{% block right_content%}
-{% endblock %}
-</div>
+    <div id="main">
+
+        <div  class="layout_col2">
+            <div class="ui red vertical demo sidebar menu">
+                <div class="header item">
+                    <a  id="toggle"> <i class="step forward icon"></i></a>
+                    <a> <i class="inbox icon"></i></a>
+                    <a> <i class="sitemap icon"></i></a>
+                    <a> <i class="info letter icon"></i></a>
+                </div>
+                <a class="active item">
+                    <i class="heart icon"></i>
+                    Current Section
+                </a>
+                <a class="item">
+                    <i class="facebook icon"></i>
+                    Like us on Facebook
+                </a>
+
+                <div class="item">
+                    <b>More</b>
+
+                    <div class="menu">
+                        <a class="item">About</a>
+                        <a class="item">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main_panel">
+                342342
+            </div>
+        </div>
+
+
+    </div>
+
 </div>
 
 <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'semantic/javascript/semantic.js' %}"></script>
 <script type="text/javascript" src="{% static 'console/js/angular/angular.js' %}"></script>
+<script>
+    $(document).ready(function () {
+        $('#toggle').click(function () {
+
+            var $sidebar = $('.ui.demo.sidebar');
+            var $main_panel = $('.layout_col2 .main_panel');
+            var $icon = $('#toggle i.icon');
+            if ($sidebar.hasClass('active')) {
+                $sidebar.removeClass('active');
+            } else {
+                $sidebar.addClass('active');
+            }
+
+            if ($main_panel.hasClass('pull_right')) {
+                $main_panel.removeClass('pull_right');
+            } else {
+                $main_panel.addClass('pull_right');
+            }
+
+            if($icon.hasClass('forward')) {
+                $icon.removeClass('forward');
+                $icon.addClass('backward');
+            }else {
+                $icon.removeClass('backward');
+                $icon.addClass('forward');
+            }
+
+        });
+    });
+
+</script>
 </body>
 </html>
