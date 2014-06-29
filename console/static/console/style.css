@@ -1,5 +1,31 @@
 @CHARSET "UTF-8";
 
+/*
+    font-face
+
+*/
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  src:  url(./font/Audiowide.woff) format('woff');
+}
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/DancingScript.woff) format('woff');
+}
+@font-face {
+  font-family: 'Playball';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/Playball.woff) format('woff');
+}
+
+
+
+
 html,
 body {
     height: 100%;
@@ -22,13 +48,12 @@ header {
     overflow: hidden;
     padding-bottom: 10px;
 }
+
 header .logo {
-    display: block;
-    background-image: url('/static/images/logo.png');
-    width:275px;
+    font-family: 'Audiowide', cursive;
+    font-size: 38px;
+    font-weight: 400;
 }
-
-
 
 #wrap-all {
     position: relative;
@@ -50,16 +75,17 @@ header .logo {
 }
 
 .layout_col2 .ui.demo.sidebar .item:hover {
-    background-color: rgba(0,0,0,0,.4);
+    background-color: rgba(0, 0, 0, 0, .4);
 }
 
 .layout_col2 .ui.red.demo.sidebar .item.active {
-    border-right: 3px solid rgba(217, 92, 92,.8);
+    border-right: 3px solid rgba(217, 92, 92, .8);
 }
 
 .layout_col2 .ui.demo.sidebar.active .item.active {
-     border-right:none;
+    border-right: none;
 }
+
 .layout_col2 .ui.demo.sidebar .item .icon {
     -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
@@ -81,6 +107,7 @@ header .logo {
 }
 
 .ui.demo.menu > .header.item {
+    white-space:nowrap;
     overflow: hidden;
     padding: 2px 0px;
 }
@@ -108,7 +135,7 @@ header .logo {
     -o-transform: scale(1.5);
     -ms-transform: scale(1.5);
     transform: scale(1.5);
-    color: red;
+    color: rgba(217, 92, 92, .8);
 }
 
 .layout_col2 .main_panel {
