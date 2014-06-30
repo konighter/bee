@@ -24,7 +24,9 @@
 }
 
 
-
+*{
+    box-sizing: border-box;
+}
 
 html,
 body {
@@ -46,7 +48,12 @@ header {
     width: 100%;
     height: 60px;
     overflow: hidden;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+header .column {
+    margin:5px !important;
 }
 
 header .logo {
@@ -64,10 +71,12 @@ header .logo {
 }
 
 .layout_col2 .ui.demo.sidebar {
-    margin-left: -210px !important;
-    top: 70px;
+    top: 60px;
     left: 0;
+    margin-left: -210px !important;
     padding-bottom: 50px;
+    /*box-shadow:none;*/
+    border-top-right-radius: 0px !important;
 }
 
 .layout_col2 .ui.demo.sidebar.active {

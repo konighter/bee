@@ -1,6 +1,7 @@
 #coding=utf-8
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+
 class Resume(models.Model):
     id = models.BigIntegerField(primary_key=True)
     url = models.CharField(max_length=500, blank=True)

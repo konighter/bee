@@ -24,9 +24,9 @@
 						 {{ user.username }}
 			            <i class="dropdown icon"></i>
 			            <div class="menu">
-			              <a class="item">工作台</a>
+			              <a href="{% url 'console:main' %}" class="item">工作台</a>
 			              <a class="item">个人中心</a>
-			              <a class="item">退出登录</a>
+			              <a href="{% url 'logout' %}" class="item">退出登录</a>
 			            </div>
 			         </div>
 					</div>

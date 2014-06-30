@@ -22,38 +22,25 @@
 <div id="wrap-all">
     <div id="main">
 
-        <div ng-controller="sidebar_nav" class="layout_col2">
-            <div class="ui red vertical demo sidebar menu">
+        <div ng-controller="sidebar_nav"  class="layout_col2">
+            <div  class="ui red vertical demo sidebar menu active">
                 <div class="header item">
-                    <a  id="toggle"> <i class="step forward icon"></i></a>
+                    <a  id="toggle"> <i class="step backward icon"></i></a>
                     <a> <i class="inbox icon"></i></a>
                     <a> <i class="sitemap icon"></i></a>
                     <a> <i class="info letter icon"></i></a>
                 </div>
-                <a ng-repeat="menu in menus " class="{$ menu.class $} item" ng-click="nav_c(menu)">
+                <a ng-repeat="menu in menus " ng-class="{active: menu.active}" class="item" ng-click="nav_c(menu)">
                     <i class="{$ menu.icon $} icon"></i>
                     {$ menu.title $}
                 </a>
-                <a class="item">
-                    <i class="facebook icon"></i>
-                    Like us on Facebook
-                </a>
 
-                <div class="item">
-                    <b>More</b>
-
-                    <div class="menu">
-                        <a class="item">About</a>
-                        <a class="item">Contact Us</a>
-                    </div>
-                </div>
             </div>
-            <div class="main_panel">
-                <div ng-include="active_menu.url"></div>
+            <div class="main_panel pull_right">
+                <div ng-include=" active_menu.url "></div>
+
             </div>
         </div>
-
-
     </div>
 
 </div>
@@ -61,11 +48,11 @@
 <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'semantic/javascript/semantic.js' %}"></script>
 <script type="text/javascript" src="{% static 'console/js/angular/angular.js' %}"></script>
+<script type="text/javascript" src="{% static 'console/js/app/cached-template.js'%}" ></script>
 <script type="text/javascript" src="{% static 'console/js/app/app.js' %}"></script>
 <script>
     $(document).ready(function () {
         $('#toggle').click(function () {
-
             var $sidebar = $('.ui.demo.sidebar');
             var $main_panel = $('.layout_col2 .main_panel');
             var $icon = $('#toggle i.icon');
