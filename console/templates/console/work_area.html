@@ -1,0 +1,25 @@
+<div class="work_area" {% block work_ctr %}{% endblock %}>
+    <div class="navbar">
+        {% block area_title %}
+
+            <div class="title">
+                <h3><i class="dashboard icon"></i>{% block a_title %}工作台{% endblock %} </h3>
+            </div>
+            {% block nav_menu %}
+            <div class="nav_bar_menu">
+
+                <a class="item active">任务</a>
+                <a class="item">文件</a>
+                <a class="item">话题</a>
+                <a class="item">文档</a>
+
+            </div>
+             {% endblock %}
+        {% endblock %}
+    </div>
+    <div class="work_space">
+        <div class="space">
+            {% block work_space %}{% endblock %}
+        </div>
+    </div>
+</div>
