@@ -30,14 +30,14 @@
                     <a> <i class="sitemap icon"></i></a>
                     <a> <i class="info letter icon"></i></a>
                 </div>
-                <a ng-repeat="menu in menus " ng-class="{active: menu.active}" class="item" ng-click="nav_c(menu)">
+                <a ng-repeat="menu in menus " ng-class="linkMenu(menu)" class="item" ng-click="sidebar_menu_nav(menu)">
                     <i class="{$ menu.icon $} icon"></i>
                     {$ menu.title $}
                 </a>
 
             </div>
             <div class="main_panel pull_right">
-                <div ng-include=" active_menu.url "></div>
+                <div ng-include="currentMenu.url"></div>
 
             </div>
         </div>
@@ -48,7 +48,9 @@
 <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'semantic/javascript/semantic.js' %}"></script>
 <script type="text/javascript" src="{% static 'console/js/angular/angular.js' %}"></script>
+<script type="text/javascript" src="{% static 'console/js/angular-route/angular-route.js' %}"></script>
 <script type="text/javascript" src="{% static 'console/js/app/cached-template.js'%}" ></script>
+<script type="text/javascript" src="{% static 'console/js/app/dashboard.js' %}"></script>
 <script type="text/javascript" src="{% static 'console/js/app/app.js' %}"></script>
 <script>
     $(document).ready(function () {

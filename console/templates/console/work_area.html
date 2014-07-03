@@ -6,7 +6,7 @@
                 <h3><i class="dashboard icon"></i>{% block a_title %}工作台{% endblock %} </h3>
             </div>
             {% block nav_menu %}
-            <div class="nav_bar_menu">
+            <div class="right floated nav_bar_menu ">
 
                 <a class="item active">任务</a>
                 <a class="item">文件</a>
@@ -17,9 +17,12 @@
              {% endblock %}
         {% endblock %}
     </div>
+ {% block work_space %}
     <div class="work_space">
         <div class="space">
-            {% block work_space %}{% endblock %}
+
         </div>
     </div>
+{% endblock %}
+
 </div>

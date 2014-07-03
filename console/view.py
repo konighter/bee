@@ -17,7 +17,7 @@ def cosole_main(request):
 
 @login_required
 def dashboard(request):
-    return render_to_response('console/dashboard.html',RequestContext(request))
+    return render_to_response('console/dashboard/dashboard.html',RequestContext(request))
 
 
 def menus(request):

@@ -1,0 +1,43 @@
+{% extends 'console/work_area.html' %}
+
+{% block work_ctr %} ng-controller='dashboardController' {% endblock %}
+
+{% block  a_title %} 工作台 {% endblock %}
+
+
+
+{% block work_space %}
+
+
+
+    <div class=" work_space">
+        <div class="work_space_inner">
+            <div class="space">
+                <div class="space_header">
+                    <div class="nav_bar_menu">
+                        <a ng-repeat="tab_menu in tab_menus" ng-class="linkCss(tab_menu)" class="item"
+                           ng-click="dashboardTabNav(tab_menu)">
+                            {$ tab_menu.title $}
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+                <div class="tab_content">
+                    <div ng-include="dashboard_current_tab_menu.url"></div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class=" right_sidebar">
+        333333333333333333333333333333333333333333
+
+    </div>
+
+{% endblock %}
