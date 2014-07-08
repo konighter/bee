@@ -1,13 +1,18 @@
 #coding=utf-8
 from django.conf.urls import patterns, url
-from console import view
-from console.views import dashboard
-from console.views import menu_view
-
+from console.views import dashboard,explore
 urlpatterns = patterns('',
-    url(r'^console/$', view.cosole_main,name='main'),
-    # url(r'^dashboard$', views.,name='main'),
-    url(r'^dashboard/$',dashboard.main,name='dashboard'),
-    url(r'^dashboard/feeds$',dashboard.feeds,name='dashboard'),
-    url(r'^menus/$',view.menus,name='menus'),
+    url(r'^console/$',dashboard.main,name='console'),
+    url(r'^dashboard/$',dashboard.main),
+    url(r'^console/dashboard/$',dashboard.dashboard,name='dashboard'),
+    url(r'^console/dashboard/feeds/$',dashboard.feeds,name='ds_feeds'),
+    url(r'^console/dashboard/tasks/$',dashboard.tasks,name='ds_tasks'),
+    url(r'^console/dashboard/contributes/$',dashboard.contributes,name='ds_contributes'),
+)
+
+urlpatterns += patterns('',
+           url(r'^explore/$',dashboard.main),
+           url(r'^console/explore$',explore.explore,name='explore'),
+           url(r'^console/explore/position$',explore.position,name='explore'),
+
 )

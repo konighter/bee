@@ -18,7 +18,6 @@ urlpatterns = patterns('',
     url(r'^login/$', login_view.LoginView.as_view() , name='login'),
     url(r'^logout/$', logout_view.logout_view, name='logout'),
     url(r'^join/$', signin_view.SigninView.as_view() , name='join'),
-    url(r'^test/$', test , name='join'),
 ) + staticfiles_urlpatterns()
 
 

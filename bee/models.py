@@ -1,4 +1,5 @@
 #coding=utf-8
+import datetime
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
@@ -91,3 +92,16 @@ class Staff(AbstractUser):
     phone    = models.CharField(max_length=50, blank=True)
     class Meta:
         db_table = 'tbl_staff'
+
+
+class Menu(models.Model):
+    type     = models.CharField(max_length=4)
+    title    = models.CharField(max_length=50)
+    code     = models.CharField(max_length=50)
+    url      = models.CharField(max_length=200)
+    belongTo = models.CharField(max_length=50)
+    index    = models.IntegerField()
+    createDate = models.DateTimeField(default=datetime.datetime.now)
+    status   = models.CharField(max_length=4)
+    class Meta :
+        db_table = 'tbl_menu'

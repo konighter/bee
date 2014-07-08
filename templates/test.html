@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  ng-app>
+<html  ng-app="M">
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
@@ -11,25 +11,26 @@
     <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'semantic/javascript/semantic.js' %}"></script>
     <script type="text/javascript" src="{% static 'console/js/angular/angular.js' %}"></script>
+    <script type="text/javascript" src="{% static 'console/js/angular-route/angular-route.js' %}"></script>
 
     <script>
-        function step1($scope) {
-            $scope.name = "name1";
-        }
-         function step2($scope) {
-        }
+        angular('M',['ngRoute'])
+                .config()
 
     </script>
 
 </head>
 <body>
-    <div ng-controller="step1">
-        Your name: <input type="text" ng-model="name" placeholder="World">
-       <div ng-bind="name"></div>
-        <div ng-controller="step2">
-<div ng-bind="name"></div>
-        </div>
+
+    <div ng-controller="MainCtrl as main">
+        Choose:
+        <a href="Book/Moby">Moby</a> |
+         <a href="Book/Gateby">Gateby</a> |
+         <a href="Book/Scarlet">Scarlet</a> |
+
+        <ng-view></ng-view>
 
     </div>
+
 </body>
 </html>
