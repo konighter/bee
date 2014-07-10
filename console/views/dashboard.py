@@ -3,7 +3,7 @@ from django.template import RequestContext
 
 __author__ = 'carvee'
 
-def main(request):
+def main(request,*args,**kwargs):
     return render_to_response('console/console.html',RequestContext(request))
 
 def dashboard(request):

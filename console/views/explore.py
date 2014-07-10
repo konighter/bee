@@ -8,3 +8,6 @@ def explore(request):
 
 def position(request):
     return render_to_response('console/position/position_detail.html',RequestContext(request))
+
+def taskDetail(request):
+    return render_to_response('console/explore/task.html',RequestContext(request))

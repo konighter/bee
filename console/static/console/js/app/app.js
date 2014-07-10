@@ -28,6 +28,10 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore'])
             templateUrl:'/console/explore/position',
             controller:'PositionController'
         })
+        .when('/explore/tasks/:taskid',{
+            templateUrl:  '/console/explore/tasks/detail',
+            controller : 'TaskDetailCtrl'
+        })
         .otherwise(
             {
                 template:'OH! MY GOD ,How you enter here!!'
@@ -48,6 +52,11 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore'])
 
         $scope.sidebar_menu_nav = function(menu){
              $rootScope.currentMenu = menu;
+        }
+        $scope.if_collapse = false;
+
+        $scope.js_sidebar_collapse = function(){
+            $scope.if_collapse = !$scope.if_collapse;
         }
 
 

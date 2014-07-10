@@ -1,3 +1,9 @@
-<div>
-    tasks
+<div ng-controller="TasksController">
+    <div class="tab_box">
+        <a ng-repeat="task in tasks" ng-href="{$ task.url $}">
+            <div class="ui icon header">
+  <i class=" tasks icon"></i>{$ task.title $}
+</div>
+        </a>
+    </div>
 </div>

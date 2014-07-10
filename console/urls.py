@@ -12,7 +12,8 @@ urlpatterns = patterns('',
 
 urlpatterns += patterns('',
            url(r'^explore/$',dashboard.main),
+           url(r'^explore/tasks/(\w+)$',dashboard.main),
            url(r'^console/explore$',explore.explore,name='explore'),
-           url(r'^console/explore/position$',explore.position,name='explore'),
-
+           url(r'^console/explore/position$',explore.position,name='position'),
+           url(r'^console/explore/tasks/detail$',explore.taskDetail,name='taskDetail'),
 )

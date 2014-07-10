@@ -1,0 +1,52 @@
+{% extends 'console/work_area.html' %}
+
+
+{% block  a_title %}  <h3><i class="tasks icon"></i>{$ task.title $} </h3> {% endblock %}
+
+
+
+{% block work_space %}
+    <div class=" work_space">
+        <div class="work_space_inner">
+            <div class="space">
+
+                <div class="ui five steps">
+                    <div ng-repeat="step in task.steps" ng-class="{active: step.logs != undefined && step.logs.length != 0 ,disabled : step.logs == undefined}" class="ui step">
+                        {$ step.step $}
+                    </div>
+
+                </div>
+                <div class="step_logs">
+                    <ul class="log" ng-repeat="step in task.steps">
+                           <li ng-repeat="log in step.logs"> {$ log $} </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class=" right_sidebar">
+        <h2 class="ui header">
+            <i class="align justify icon"></i>
+
+            <div class="content">
+                {$ company.name $}
+                <div class="sub header">{$ company.desc $}</div>
+            </div>
+        </h2>
+        <div class="ui horizontal icon divider">
+				  <i class="red circular heart icon"></i>
+				</div>
+    <h3> {$ position.title $} </h3>
+        <div>
+    <p>
+        {$ position.jd $}
+    </p>
+            </div>
+
+    </div>
+{% endblock %}

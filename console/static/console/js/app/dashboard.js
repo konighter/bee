@@ -44,22 +44,27 @@ angular.module('dashboard',['ngRoute'])
 
         }])
 
-.controller('WorksController',['$scope','$rootScope', '$route', '$routeParams', '$location',
+.controller('TasksController',['$scope','$rootScope', '$route', '$routeParams', '$location',
         function($scope, $rootScope,$route, $routeParams, $location){
-            $scope.works = [{title:'new feeds-1!!'},{title:'new feeds-2!!'},{title:'new feeds-3!!'},{title:'new feeds-4!!'},{title:'new feeds-5!!'}]
+            $scope.tasks = [
+                {title:'创维-射频工程师',url:'/explore/tasks/34fdf3vdf0985'},
+                {title:'创维-射频工程师',url:'/explore/tasks/34fdf3vdf0985'},
+                {title:'北京某某科技公司-2季度',url:'/explore/tasks/34fdf3vdf0985'},
+                {title:'北京某某科技公司-2季度',url:'/explore/tasks/34fdf3vdf0985'},
+                {title:'北京某某科技公司-2季度',url:'/explore/tasks/34fdf3vdf0985'}]
         }])
 
-.controller('ContributesController',['$scope','$rootScope', '$route', '$routeParams', '$location',
+.controller('ProjectsController',['$scope','$rootScope', '$route', '$routeParams', '$location',
         function($scope,$rootScope, $route, $routeParams, $location){
             $scope.contributes = [{title:'new feeds-1!!'},{title:'new feeds-2!!'},{title:'new feeds-3!!'},{title:'new feeds-4!!'},{title:'new feeds-5!!'}]
         }])
 
 .controller('DashboardController', ['$scope','$rootScope', '$http', function ($scope, $rootScope,$http) {
-
+        $rootScope.currentMenu = 'dashboard';
         $scope.tab_menus = [
             {title:"最新动态",code:'feeds',url:'/console/dashboard/feeds'},
             {title:"我的任务",code:'tasks',url:'/console/dashboard/tasks'},
-            {title:"参与项目",code:'mails',url:'/console/dashboard/contributes'}
+            {title:"参与项目",code:'projects',url:'/console/dashboard/contributes'}
         ];
 
         $scope.dashboard_current_tab_menu = $scope.tab_menus[0];
