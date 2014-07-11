@@ -348,21 +348,117 @@ border-bottom: solid 1px #646668;
     background-color: #ffbf87;
 }
 
-.step_logs .log{
-    display: inline-block;
-    width: 20%;
-    padding: 2px;
-    list-style: none;
-    float: left;
+.time_line {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding-top: 50px;
 }
-.step_logs .log:hover {
-    background-color: #ffbf87;
-    -webkit-transition: all 0.3s;-moz-transition: all 0.3s;-ms-transition: all 0.3s;-o-transition: all 0.3s;transition: all 0.3s;
+
+.time_line:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #afdcf8;
+    left: 150px;
+    margin-left: -10px;
 }
-.step_logs .log li {
-    padding: 5px;
-    cursor: help;
+
+.time_line .item {
+    cursor: default !important;
+    display: block;
+    position: relative;
 }
+
+.time_line .item .title {
+    display: block;
+    width: 145px;
+    padding-right: 40px;
+    position: absolute;
+}
+
+.time_line .item .title span {
+    display: block;
+    text-align: right;
+}
+
+.time_line .item .title span:last-child {
+    font-size: 25px;
+    color: #46a4da;
+}
+
+.time_line .item .check {
+    width: 20px;
+    height: 20px;
+    font-family: 'ecoico';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 1.4em;
+    line-height: 40px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: #fff;
+    background: #46a4da;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #afdcf8;
+    text-align: center;
+    left: 157px;
+    top: 0;
+    margin: 0 0 0 -25px;
+}
+
+.time_line .item .content {
+    margin: 0 10px 15px 175px;
+    background: #3594cb;
+    color: #fff;
+    padding: 2em;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+    position: relative;
+    border-radius: 5px;
+}
+
+.time_line .item .content:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);		/* IE 9 */
+    -webkit-transform: rotate(45deg);	/* Safari and Chrome */
+    -o-transform: rotate(45deg);		/* Opera */
+    -moz-transform: rotate(45deg);
+    position: absolute;
+    top: 8px;
+    left: -5px;
+    background: #3594cb;
+}
+
+.time_line .item:nth-child(odd) .content , .time_line .item:nth-child(odd) .content:before {
+    background: #8ab1cb;
+}
+
+.time_line .item:hover .content {
+    margin-right: 40px;
+}
+
+.time_line .item .action {
+    display: none;
+}
+
+.time_line .item:hover .action{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    color: #B85B60;
+}
+
 
 /*@media {*/
 
