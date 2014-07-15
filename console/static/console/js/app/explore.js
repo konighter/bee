@@ -24,4 +24,8 @@ angular.module('explore',[])
 
             $scope.company = {name:'北京某某公司',contract:'刘经理',tel:'13478675987',qq:'3658749098',desc:'不论你身处哪个行业，从事哪个工作，只要您有团队协作的需求，就是Worktile的用户'}
 
+            $scope.active_step = function(step) {
+                step.active = true;
+            }
+
         }])

@@ -2,7 +2,7 @@
  * Created by carvee on 14-6-29.
  */
 
-angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore'])
+angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','resume'])
     .run(['$rootScope',function($rootScope){
         $rootScope.site_title = '欢迎使用Raccoon！！！'
     }])
@@ -32,6 +32,16 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore'])
             templateUrl:  '/console/explore/tasks/detail',
             controller : 'TaskDetailCtrl'
         })
+        .when('/resumes',{
+            templateUrl: '/console/resumes',
+            controller: 'ResumeController'
+        })
+        .when('/resume/:resumeId',{
+            templateUrl: function(param){
+                return '/console/resume/'+param.resumeId;
+            },
+            controller: 'ResumeDetailController'
+        })
         .otherwise(
             {
                 template:'OH! MY GOD ,How you enter here!!'
@@ -45,7 +55,7 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore'])
         $scope.menus = [
             {title: '工作台', code: 'dashboard', url: '/dashboard', icon: 'dashboard', 'active': true},
             {title: '发现', code: 'explore', url: '/explore', icon: 'calendar'},
-            {title: 'nihao2', code: 'nihao', url: 'explore_top_tab23423.html', icon: 'heart'}
+            {title: '简历管理', code: 'resume', url: '/resumes', icon: 'users'}
         ];
 
         $rootScope.currentMenu = $scope.menus[0].code;

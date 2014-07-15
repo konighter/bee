@@ -5,8 +5,6 @@ from django.shortcuts import render_to_response
 from raccoon.views import login_view, signin_view , logout_view
 admin.autodiscover()
 
-def test(request):
-    return render_to_response('test.html')
 
 urlpatterns = patterns('',
     # Examples:

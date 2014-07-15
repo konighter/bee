@@ -1,0 +1,51 @@
+{% extends 'console/work_area.html' %}
+{% block work_ctr %}
+    ng-controller='ResumeController'
+{% endblock %}
+
+{% block a_title %}
+    <h3><i class="users icon"></i>候选人管理 </h3>
+{% endblock %}
+
+{% block work_space %}
+    <div class="main_panel">
+        <div class="search_bar">
+            <div class="ui action input fluid">
+                <input type="text" placeholder="搜索简历">
+                <div class="ui icon button"><i class="search icon"></i></div>
+            </div>
+        </div>
+        <div class="search_list" >
+            <div class="empty_list" ng-show="resumes.length <= 0">
+                <i class="search icon"></i>
+                <div class="content">
+                    没有匹配的简历,请使用其他关键字搜索
+                </div>
+            </div>
+            <div class="ui list tab_list" ng-show="resumes.length > 0">
+                 <a ng-repeat="r in resumes" class="item" ng-href="{$ r.url $}">
+                    <img class="ui avatar image" ng-src="{$ r.avatar $}">
+                    <div class="content actor">
+                      <div class="header">{$ r.name $}</div>
+                     {$ r.job $}
+                    </div>
+                    <div class="action">
+                         {$ r.resume_name $}
+                    </div>
+                     <div class="right floated datetime">
+                        <div class="ui rating" data-rating="{$ r.level $}">
+                          <i class="icon active"></i>
+                          <i class="icon active"></i>
+                          <i class="icon active"></i>
+                          <i class="icon active"></i>
+                          <i class="icon"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
