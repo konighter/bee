@@ -2,7 +2,7 @@
  * Created by carvee on 14-6-29.
  */
 
-angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','resume'])
+angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','resume','project' ])
     .run(['$rootScope',function($rootScope){
         $rootScope.site_title = '欢迎使用Raccoon！！！'
     }])
@@ -42,6 +42,10 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','re
             },
             controller: 'ResumeDetailController'
         })
+        .when('/projects',{
+            templateUrl: 'console/projects',
+            controller: 'ProjectsController'
+        })
         .otherwise(
             {
                 template:'OH! MY GOD ,How you enter here!!'
@@ -55,7 +59,10 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','re
         $scope.menus = [
             {title: '工作台', code: 'dashboard', url: '/dashboard', icon: 'dashboard', 'active': true},
             {title: '发现', code: 'explore', url: '/explore', icon: 'calendar'},
-            {title: '简历管理', code: 'resume', url: '/resumes', icon: 'users'}
+            {title: '简历管理', code: 'resumes', url: '/resumes', icon: 'users'},
+            {title: '项目管理', code: 'projects', url: '/projects', icon: 'inbox'}
+
+
         ];
 
         $rootScope.currentMenu = $scope.menus[0].code;

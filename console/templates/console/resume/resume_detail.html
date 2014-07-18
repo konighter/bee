@@ -6,205 +6,212 @@
 
 {% block work_space %}
     <div class="main_panel">
-        <div class="resume_header">
-            <div class="resume_base_info">
-                <div class="ui celled grid">
-                    <div class="row">
-                        <div class="one wide column" style="">
-                            <span class="label"> 姓名:</span> <span class="td">{$ resume.candidate $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label"> 性别:</span> <span class="td">{$ resume.gender $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label">年龄:</span> <span class="td">{$ resume.age $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label">学历:</span> <span class="td">{$ resume.edu $}</span>
-                        </div>
+    <div class="resume_header">
+        <div class="resume_base_info">
+            <div class="ui celled grid">
+                <div class="row">
+                    <div class="one wide column" style="">
+                        <span class="label"> 姓名:</span> <span class="td">{$ resume.candidate $}</span>
                     </div>
-                    <div class="row">
-
-                        <div class="one wide column" style="">
-                            <span class="label"> 生日:</span> <span class="td">{$ resume.birthday $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label"> 所在地:</span> <span class="td">{$ resume.location $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label">工作时间:</span> <span class="td">{$ resume.date_startwork $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label">期望薪资:</span> <span class="td">{$ resume.code $}</span>
-                        </div>
+                    <div class="one wide column" style="">
+                        <span class="label"> 性别:</span> <span class="td">{$ resume.gender $}</span>
                     </div>
-                    <div class="row">
-                        <div class="one wide column" style="">
-                            <span class="label">手机号:</span> <span class="td">{$ resume.code $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label"> 邮箱:</span> <span class="td">{$ resume.birthday $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label"> QQ:</span> <span class="td">{$ resume.location $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label">微博:</span> <span class="td">{$ resume.date_startwork $}</span>
-                        </div>
-
+                    <div class="one wide column" style="">
+                        <span class="label">年龄:</span> <span class="td">{$ resume.age $}</span>
                     </div>
-                    <div class="row">
-                        <div class="one wide column" style="">
-                            <span class="label">LinkedIn:</span> <span class="td">{$ resume.comments $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label">评语:</span> <span class="td">{$ resume.comments $}</span>
-                        </div>
-                        <div class="one wide column" style="">
-                            <span class="label"> 状态:</span> <span class="td">{$ resume.sts $}</span>
-                        </div>
-
-
+                    <div class="one wide column" style="">
+                        <span class="label">学历:</span> <span class="td">{$ resume.edu $}</span>
                     </div>
                 </div>
-            </div>
-            <div class="resume_avatar">
-                <img class="rounded ui image" ng-src="{$ resume.avatar $}">
+                <div class="row">
+
+                    <div class="one wide column" style="">
+                        <span class="label"> 生日:</span> <span class="td">{$ resume.birthday $}</span>
+                    </div>
+                    <div class="one wide column" style="">
+                        <span class="label"> 所在地:</span> <span class="td">{$ resume.location $}</span>
+                    </div>
+                    <div class="one wide column" style="">
+                        <span class="label">工作时间:</span> <span class="td">{$ resume.date_startwork $}</span>
+                    </div>
+                    <div class="one wide column" style="">
+                        <span class="label">期望薪资:</span> <span class="td">{$ resume.code $}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one wide column" style="">
+                        <span class="label">手机号:</span> <span class="td">{$ resume.code $}</span>
+                    </div>
+                    <div class="one wide column" style="">
+                        <span class="label"> 邮箱:</span> <span class="td">{$ resume.birthday $}</span>
+                    </div>
+                    <div class="one wide column" style="">
+                        <span class="label"> QQ:</span> <span class="td">{$ resume.location $}</span>
+                    </div>
+                    <div class="one wide column" style="">
+                        <span class="label">微博:</span> <span class="td">{$ resume.date_startwork $}</span>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="one wide column" style="">
+                        <span class="label">LinkedIn:</span> <span class="td">{$ resume.comments $}</span>
+                    </div>
+                    <div class="one wide column" style="">
+                        <span class="label">评语:</span> <span class="td">{$ resume.comments $}</span>
+                    </div>
+                    <div class="one wide column" style="">
+                        <span class="label"> 状态:</span> <span class="td">{$ resume.sts $}</span>
+                    </div>
+
+
+                </div>
             </div>
         </div>
+        <div class="resume_avatar">
+            <img class="rounded ui image" ng-src="{$ resume.avatar $}">
+        </div>
+    </div>
 
-        <div class="resume">
-            <div class="tab_header">
-                <div class="nav_bar_menu">
-                    <a class="item" ng-click="js_resume_tab('work_experience')"
-                       ng-class="{active: resume_tab === 'work_experience' }" ng-show="resume.work_experience">
+    <div class="resume">
+        <div class="tab_header">
+            <div class="nav_bar_menu">
+                <a class="item" ng-click="js_resume_tab('work_experience')"
+                   ng-class="{active: resume_tab === 'work_experience' }" ng-show="resume.work_experience">
 
-                        工作经历
-                    </a>
-                    <a class="item" ng-click="js_resume_tab('proj_experience')"
-                       ng-class="{active: resume_tab === 'proj_experience'}" ng-show="resume.proj_experience">
+                    工作经历
+                </a>
+                <a class="item" ng-click="js_resume_tab('proj_experience')"
+                   ng-class="{active: resume_tab === 'proj_experience'}" ng-show="resume.proj_experience">
 
-                        项目经验
-                    </a>
-                    <a class="item" ng-click="js_resume_tab('skills')" ng-class="{active: resume_tab === 'skills'}"
-                       ng-show="resume.skills">
+                    项目经验
+                </a>
+                <a class="item" ng-click="js_resume_tab('skills')" ng-class="{active: resume_tab === 'skills'}"
+                   ng-show="resume.skills">
 
-                        职业技能
-                    </a>
-                    <a class="item" ng-click="js_resume_tab('evaluation')"
-                       ng-class="{active: resume_tab === 'evaluation'}" ng-show="resume.evaluation">
+                    职业技能
+                </a>
+                <a class="item" ng-click="js_resume_tab('evaluation')"
+                   ng-class="{active: resume_tab === 'evaluation'}" ng-show="resume.evaluation">
 
-                        自我评价
-                    </a>
+                    自我评价
+                </a>
 
-                    <a class="item" ng-click="js_resume_tab('communication_records')"
-                       ng-class="{active: resume_tab === 'communication_records'}"
-                       ng-show="resume.communication_records">
-                        寻访记录
-                    </a>
-                </div>
+                <a class="item" ng-click="js_resume_tab('communication_records')"
+                   ng-class="{active: resume_tab === 'communication_records'}"
+                   ng-show="resume.communication_records">
+                    寻访记录
+                </a>
             </div>
-            {#            work_experience#}
-            <div class="content_module" ng-show="resume_tab === 'work_experience'">
-                <div ng-repeat="expe in resume.work_experience" class="experience divided list">
-                    <div class="date">
-                        <span>{$ expe.date_start $}</span>
+        </div>
+        {#            work_experience#}
+        <div class="content_module" ng-show="resume_tab === 'work_experience'">
+            <div ng-repeat="expe in resume.work_experience" class="experience divided list">
+                <div class="date">
+                    <span>{$ expe.date_start $}</span>
 
-                        <div class="divider">-</div>
-                        <span>{$ expe.date_end $}</span>
+                    <div class="divider">-</div>
+                    <span>{$ expe.date_end $}</span>
+                </div>
+                <div class="exp_content">
+                    <div class="header">
+                        <span>{$ expe.title $}</span> / <span>{$ expe.company $}</span> / <span>规模: {$ expe.company_scale $}</span>
+                        /<span> 下属: {$ expe.leaders $}</span> / <span>汇报对象: {$ expe.response_for $}</span>
                     </div>
-                    <div class="exp_content">
-                        <div class="header">
-                            <span>{$ expe.title $}</span> / <span>{$ expe.company $}</span> / <span>规模: {$ expe.company_scale $}</span>
-                            /<span> 下属: {$ expe.leaders $}</span> / <span>汇报对象: {$ expe.response_for $}</span>
-                        </div>
-                        <div class="ui stacked segment">
-                            {$ expe.introduction $}
+                    <div class="ui stacked segment">
+                        {$ expe.introduction $}
 
-                        </div>
                     </div>
                 </div>
-
-            </div>
-
-            {#            proj_experience   #}
-            <div class="content_module" ng-show="resume_tab === 'proj_experience'">
-                <div ng-repeat="expe in resume.proj_experience" class="experience divided list">
-                    <div class="date">
-                        <span>{$ expe.date_start $}</span>
-
-                        <div class="divider">-</div>
-                        <span>{$ expe.date_end $}</span>
-                    </div>
-                    <div class="exp_content">
-                        <div class="header">
-                            <span>{$ expe.name $}</span> / <span>{$ expe.duty $}</span> / <span>规模: {$ expe.company_scale $}</span>
-                            /<span> 下属: {$ expe.leaders $}</span> / <span>汇报对象: {$ expe.response_for $}</span>
-                        </div>
-                        <div class="ui stacked segment">
-                            {$ expe.introduction $}
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            {#            skills#}
-            <div class="content_module" ng-show="resume_tab === 'skills'">
-                <div ng-repeat="s in resume.skills" class="ui label">
-                    {$ s $}
-                    <i class="delete icon"></i>
-                </div>
-
-            </div>
-            {#            evaluation#}
-            <div class="content_module" ng-show="resume_tab === 'evaluation'">
-                <div class="ui stacked segment">
-                    {$ resume.evaluation$}
-                </div>
-
-            </div>
-            {#            communication_records#}
-            <div class="content_module communication_records" ng-show="resume_tab === 'communication_records'">
-
-                <div class="time_line">
-                    <div class="record item">
-                        <div class="datetime"></div>
-                        <div class="action_icon">
-                            <i class="comment icon"></i>
-                        </div>
-
-                        <div class="action">
-
-                              <textarea ng-model="new_comment"></textarea>
-                               <div class="buttons">
-                                   <div class="ui tiny button">
-  <i class="comment icon"></i>添加记录
-</div>
-                                   <div class="ui tiny button">
-  <i class="bell outline icon"></i>添加提醒
-</div>
-                               </div>
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="datetime"></div>
-                        <div class="action_icon">
-                            <i class="red comment icon"></i>
-                        </div>
-                        <div class="assign"></div>
-                        <div class="action">
-                             <h2 class="header">
-                                  {$ now | date:'yyyy-MM-dd' $}
-                              </h2>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
         </div>
+
+        {#            proj_experience   #}
+        <div class="content_module" ng-show="resume_tab === 'proj_experience'">
+            <div ng-repeat="expe in resume.proj_experience" class="experience divided list">
+                <div class="date">
+                    <span>{$ expe.date_start $}</span>
+
+                    <div class="divider">-</div>
+                    <span>{$ expe.date_end $}</span>
+                </div>
+                <div class="exp_content">
+                    <div class="header">
+                        <span>{$ expe.name $}</span> / <span>{$ expe.duty $}</span> /
+                        <span>规模: {$ expe.company_scale $}</span>
+                        /<span> 下属: {$ expe.leaders $}</span> / <span>汇报对象: {$ expe.response_for $}</span>
+                    </div>
+                    <div class="ui stacked segment">
+                        {$ expe.introduction $}
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {#            skills#}
+        <div class="content_module" ng-show="resume_tab === 'skills'">
+            <div ng-repeat="s in resume.skills" class="ui label">
+                {$ s $}
+                <i class="delete icon"></i>
+            </div>
+
+        </div>
+        {#            evaluation#}
+        <div class="content_module" ng-show="resume_tab === 'evaluation'">
+            <div class="ui stacked segment">
+                {$ resume.evaluation$}
+            </div>
+
+        </div>
+        {#            communication_records#}
+        <div class="content_module communication_records" ng-show="resume_tab === 'communication_records'">
+
+            <div class="time_line">
+                <div class="record item">
+                    <div class="datetime"></div>
+                    <div class="action_icon">
+                        <i class="comment icon"></i>
+                    </div>
+
+                    <div class="action">
+
+                        <textarea ng-model="new_comment"></textarea>
+
+                        <div class="buttons">
+                            <div class="ui tiny button" ng-click="add_communication_record(new_comment)">
+                                <i class="comment icon"></i>添加记录
+                            </div>
+                            <div class="ui tiny button">
+                                <i class="bell outline icon"></i>添加提醒
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div ng-repeat="r in resume.communication_records" class="item">
+                    <div class="action_icon">
+                        <i class="red comment icon"></i>
+                    </div>
+
+                    <div class="action">
+                        <h2 class="header">
+                            {$ r.date | date:'yyyy-MM-dd HH:mm' $}
+                            <div class="assign">
+                                {$ r.assign $}
+                            </div>
+                        </h2>
+
+                        <p>{$ r.comment $}</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
     </div>
 
 

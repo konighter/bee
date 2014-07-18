@@ -440,10 +440,22 @@ header .logo {
 .time_line .item .action {
     position: relative;
     margin-left: 120px;
-    height: 100%;
-    border-radius: 40px 0 0 0;
-    -webkit-border-radius: 150px;
+    /*height: 100%;*/
+    /*border-radius: .3125em;*/
+    /*-webkit-border-radius: .3125em;*/
+    /*background: rgba(146,203,222,1);*/
+    color: #fff;
+    padding: 5px;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.4;
+    border-radius: 5px;
 }
+
+.time_line .item:not(.record) .action {
+    background: rgba(146,203,222,1);
+}
+
 
 .time_line .item .action textarea{
     width: 100%;
@@ -451,14 +463,18 @@ header .logo {
     height: 50px;
     max-height: 150px;
 }
-
+.time_line .item .action p {
+    padding: 0 10px;
+}
 
 .time_line .item .action .header {
     padding-left: 20px;
     /*font-size: 30px;*/
-    background: #92cade;
-    color: rgba(255,255,255,.7);
-    margin-bottom: 0;
+    background: rgba(146,203,222,1);
+    /*color: rgba(255,255,255,.7);*/
+    margin-bottom: 10px;
+    margin-top: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 
 .time_line .item .header:before {
@@ -475,6 +491,12 @@ header .logo {
     -o-transform: rotate(45deg); /* Opera */
     -moz-transform: rotate(45deg);
     /*box-shadow: 1px 1px 1px 1px #f6f4ef;*/
+}
+
+.time_line .item .action .header .assign {
+    float: right;
+    margin-right: 50px;
+    font-size: 20px;
 }
 
 .main_panel {

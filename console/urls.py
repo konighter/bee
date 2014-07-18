@@ -1,6 +1,6 @@
 #coding=utf-8
 from django.conf.urls import patterns, url
-from console.views import dashboard,explore,resume
+from console.views import dashboard,explore,resume ,project
 
 #dashboard
 urlpatterns = patterns('',
@@ -24,6 +24,12 @@ urlpatterns += patterns('',
     url(r'^console/resumes$',resume.main,name='resumes'),
     url(r'^console/resume/(\w+)$',resume.resume_detail,name='resume_detail'),
 )
+
+# 简历管理
+urlpatterns += patterns('',
+    url(r'^console/projects$',project.main,name='projects'),
+)
+
 
 # 首页
 urlpatterns += patterns('',
