@@ -23,80 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/console/static/console/js/app/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="94" selection-start="129" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1634">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/console/templates/console/console.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="68" selection-start="2707" selection-end="2713" vertical-scroll-proportion="-10.535714" vertical-offset="1073" max-vertical-offset="2014">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/console/views/project.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="0.39508507" vertical-offset="0" max-vertical-offset="529">
-              <folding>
-                <element signature="e#24#71#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resume.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/console/views/resume.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="5" selection-start="23" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resume_detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/console/templates/console/resume/resume_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="182" column="102" selection-start="7948" selection-end="7959" vertical-scroll-proportion="0.0" vertical-offset="3102" max-vertical-offset="4237">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/console/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="42" selection-start="964" selection-end="968" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="874">
-              <folding>
-                <element signature="e#14#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resume.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/console/static/console/js/app/resume.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="24" selection-start="65" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1691">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="project.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/console/templates/console/project/project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="22" selection-start="217" selection-end="217" vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="399">
-              <folding>
-                <marker date="1405581089819" expanded="true" signature="245:257" placeholder="..." />
-              </folding>
+            <state line="32" column="0" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.5516224" vertical-offset="234" max-vertical-offset="1273">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,7 +35,7 @@
       <file leaf-file-name="project.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/console/static/console/js/app/project.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="37" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
+            <state line="34" column="44" selection-start="3497" selection-end="3497" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="836">
               <folding>
                 <element signature="e#0#40#0" expanded="false" />
               </folding>
@@ -112,10 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/console/static/console/js/app/dashboard.js">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/console/static/console/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="45" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1615">
+            <state line="675" column="19" selection-start="12459" selection-end="12459" vertical-scroll-proportion="0.0" vertical-offset="12461" max-vertical-offset="13813">
               <folding />
             </state>
           </provider>
@@ -165,23 +96,23 @@
         <option value="$PROJECT_DIR$/console/templates/console/dashboard/ds_feeds.html" />
         <option value="$PROJECT_DIR$/console/templates/console/resume/resume.html" />
         <option value="$PROJECT_DIR$/console/views/resume.py" />
-        <option value="$PROJECT_DIR$/console/static/console/style.css" />
         <option value="$PROJECT_DIR$/console/templates/console/resume/resume_detail.html" />
-        <option value="$PROJECT_DIR$/console/static/console/js/app/resume.js" />
-        <option value="$PROJECT_DIR$/console/templates/console/project/project.html" />
         <option value="$PROJECT_DIR$/console/templates/console/console.html" />
-        <option value="$PROJECT_DIR$/console/urls.py" />
         <option value="$PROJECT_DIR$/console/static/console/js/app/app.js" />
-        <option value="$PROJECT_DIR$/console/static/console/js/app/project.js" />
         <option value="$PROJECT_DIR$/console/views/project.py" />
+        <option value="$PROJECT_DIR$/console/static/console/js/app/resume.js" />
+        <option value="$PROJECT_DIR$/console/urls.py" />
+        <option value="$PROJECT_DIR$/console/templates/console/project/project.html" />
+        <option value="$PROJECT_DIR$/console/static/console/style.css" />
+        <option value="$PROJECT_DIR$/console/static/console/js/app/project.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="366" />
-    <option name="y" value="84" />
-    <option name="width" value="1400" />
-    <option name="height" value="933" />
+    <option name="x" value="64" />
+    <option name="y" value="-5" />
+    <option name="width" value="1857" />
+    <option name="height" value="1085" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -238,6 +169,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -589,7 +568,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="366" y="84" width="1400" height="933" extended-state="0" />
+    <frame x="64" y="-5" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -597,8 +576,8 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20931953" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27453417" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15644002" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23092999" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -808,13 +787,6 @@
         <state line="16" column="55" selection-start="799" selection-end="799" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="250" column="19" selection-start="3957" selection-end="3957" vertical-scroll-proportion="0.64098835" vertical-offset="4309" max-vertical-offset="8873">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/console/templates/console/explore/task.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="72" column="22" selection-start="3452" selection-end="3452" vertical-scroll-proportion="-20.357143" vertical-offset="798" max-vertical-offset="2014">
@@ -876,13 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/console/static/console/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="466" column="20" selection-start="9061" selection-end="9061" vertical-scroll-proportion="0.0" vertical-offset="8592" max-vertical-offset="12274">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/console/templates/console/resume/resume_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="182" column="102" selection-start="7948" selection-end="7959" vertical-scroll-proportion="0.0" vertical-offset="3102" max-vertical-offset="4237">
@@ -893,29 +858,6 @@
     <entry file="file://$PROJECT_DIR$/console/templates/console/resume/resume.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="14" selection-start="0" selection-end="1807" vertical-scroll-proportion="0.8473896" vertical-offset="317" max-vertical-offset="1064">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/templates/console/project/project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="217" selection-end="217" vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="399">
-          <folding>
-            <marker date="1405581089819" expanded="true" signature="245:257" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/views/resume.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="5" selection-start="23" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/static/console/js/app/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="94" selection-start="129" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1634">
           <folding />
         </state>
       </provider>
@@ -934,37 +876,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/console/views/project.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="54" selection-start="197" selection-end="204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <folding>
+            <element signature="e#24#71#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/static/console/js/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="42" selection-start="2208" selection-end="2215" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1634">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/views/resume.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="5" selection-start="23" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/console/static/console/js/app/resume.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="65" selection-end="76" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1691">
+        <state line="35" column="21" selection-start="2730" selection-end="2730" vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1691">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="893">
+          <folding>
+            <element signature="e#14#56#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="456" column="19" selection-start="7181" selection-end="7181" vertical-scroll-proportion="0.0" vertical-offset="8167" max-vertical-offset="8873">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/console/static/console/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="675" column="19" selection-start="12459" selection-end="12459" vertical-scroll-proportion="0.0" vertical-offset="12461" max-vertical-offset="13813">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/console/static/console/js/app/project.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="37" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
+        <state line="34" column="44" selection-start="3497" selection-end="3497" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="836">
           <folding>
             <element signature="e#0#40#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/console/urls.py">
+    <entry file="file://$PROJECT_DIR$/console/templates/console/project/project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="42" selection-start="964" selection-end="968" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="874">
-          <folding>
-            <element signature="e#14#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/console/views/project.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="0.39508507" vertical-offset="0" max-vertical-offset="529">
-          <folding>
-            <element signature="e#24#71#0" expanded="true" />
-          </folding>
+        <state line="32" column="0" selection-start="1181" selection-end="1181" vertical-scroll-proportion="0.5516224" vertical-offset="234" max-vertical-offset="1273">
+          <folding />
         </state>
       </provider>
     </entry>

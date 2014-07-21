@@ -3,7 +3,7 @@
  */
 angular.module('resume',['ngRoute'])
 .controller('ResumeController',['$scope','$rootScope',function($scope,$rootScope){
-        $rootScope.currentMenu = 'resume';
+        $rootScope.currentMenu = 'resumes';
         $scope.resumes = [
             {avatar:'/static/images/dog.jpg',name:'李某某',job:'某某公司/产品总监',url:'/resume/df873fie8r3r',resume_name:'产品总监',level:'4'},
              {avatar:'/static/images/dog.jpg',name:'李某某',job:'某某公司/产品总监',url:'/resume/df873fie8r3r',resume_name:'产品总监',level:'4'},
@@ -30,7 +30,7 @@ angular.module('resume',['ngRoute'])
 
 .controller('ResumeDetailController',['$scope', '$rootScope','$route', '$routeParams', '$location',
         function($scope,$rootScope, $route, $routeParams, $location){
-    $rootScope.currentMenu = 'resume';
+    $rootScope.currentMenu = 'resumes';
     var resumeId = $routeParams.resumeId
     console.log(resumeId);
     $scope.resume = {

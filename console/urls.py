@@ -38,4 +38,5 @@ urlpatterns += patterns('',
     url(r'^explore/$',dashboard.main),
     url(r'^resumes/$',dashboard.main),
     url(r'^resume/(\w+)$',dashboard.main),
+    url(r'^projects$',dashboard.main),
 )

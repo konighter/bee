@@ -1,6 +1,6 @@
 {% extends 'console/work_area.html' %}
 {% block work_ctr %}
-    ng-controller='ProjectController'
+    ng-controller='ProjectsController'
 {% endblock %}
 
 {% block a_title %}
@@ -9,7 +9,53 @@
 
 {% block work_space %}
     <div class="main_panel">
+        <div class="projs_panel" ng-show="projects && projects.length !== 0">
 
+
+
+             <div class="proj" ng-hide="(projects | filter:{is_star:true}).length == 0">
+                 <div class="proj_header">
+                    <i class="star icon"></i>常用项目 <span class="badge">{$ (projects | filter:{is_star:true}).length $}</span>
+                 </div>
+                 <div class="proj_grid">
+                        <div class="proj_item" ng-repeat=" project in projects | filter:{is_star:true} ">
+                            <a class="proj_star">
+
+                            </a>
+                            <a class="proj_center" ng-href="/project/{$ project.id $}">
+                                    <i ng-class="project.icon" class="icon"></i>
+                                <h4> {$ project.name $} </h4>
+                            </a>
+
+                        </div>
+                 </div>
+             </div>
+
+            <div class="proj" ng-hide="(projects | filter:{is_star:true}).length == 0">
+                 <div class="proj_header">
+                    <i class="inbox icon"></i>全部项目 <span class="badge">{$ projects.length $}</span>
+                 </div>
+                 <div class="proj_grid">
+                        <div class="proj_item" ng-repeat=" project in projects ">
+                            <a class="proj_star">
+
+                            </a>
+                            <a class="proj_center" ng-href="/project/{$ project.id $}">
+                                    <i ng-class="project.icon" class="icon"></i>
+                                <h4> {$ project.name $} </h4>
+                            </a>
+
+                        </div>
+                 </div>
+             </div>
+
+
+        </div>
+        <div class="empty_panel" ng-hide="projects || projects.length === 0">
+                <i class="inbox icon"></i>
+            <br>
+            <span> 没有参与的项目</span>
+        </div>
     </div>
 
 
