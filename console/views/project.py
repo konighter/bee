@@ -8,4 +8,4 @@ def main(request,*args,**kwargs):
     return render_to_response('console/project/project.html',RequestContext(request))
 
 def project_detail(request,resumeId,*args,**kwargs):
-    return render_to_response('console/resume/resume_detail.html',RequestContext(request))
+    return render_to_response('console/project/project_detail.html',RequestContext(request))

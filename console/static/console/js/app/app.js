@@ -46,6 +46,12 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','re
             templateUrl: 'console/projects',
             controller: 'ProjectsController'
         })
+        .when('/project/:project_id',{
+            templateUrl: function(param){
+                return '/console/project/'+param.project_id;
+            },
+            controller: 'ProjectDetailController'
+        })
         .otherwise(
             {
                 template:'OH! MY GOD ,How you enter here!!'

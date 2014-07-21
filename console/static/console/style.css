@@ -702,16 +702,32 @@ header .logo {
 
 .proj .proj_grid .proj_item .proj_center i {
     font-size: 32px;
-    color: rgba(60, 140, 173 , .9);
+    color: rgba(60, 140, 173, .9);
 }
 
 .proj .proj_grid .proj_item .proj_star {
+    color: #d3d3d3;
+    font-size: 18px;
+    left: 5px;
+    visibility: hidden;
+    top: 5px;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
     position: absolute;
-    left: 1px;
-    top: 1px;
+    display: block;
+    text-align: center;
+    line-height: 30px;
 }
 
+.proj .proj_grid .proj_item:hover .proj_star {
+    visibility: visible;
+}
 
+.proj .proj_grid .proj_item .proj_star.fav {
+    color: #FFCB08 !important;
+    visibility: visible;
+}
 
 /*@media {*/
 

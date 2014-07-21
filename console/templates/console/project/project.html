@@ -19,8 +19,8 @@
                  </div>
                  <div class="proj_grid">
                         <div class="proj_item" ng-repeat=" project in projects | filter:{is_star:true} ">
-                            <a class="proj_star">
-
+                            <a class="proj_star" ng-class="{true:'fav'}[project.is_star]" ng-click="js_toggle_project_fav(project)">
+                                <i class="star icon"></i>
                             </a>
                             <a class="proj_center" ng-href="/project/{$ project.id $}">
                                     <i ng-class="project.icon" class="icon"></i>
@@ -31,14 +31,14 @@
                  </div>
              </div>
 
-            <div class="proj" ng-hide="(projects | filter:{is_star:true}).length == 0">
+            <div class="proj">
                  <div class="proj_header">
                     <i class="inbox icon"></i>全部项目 <span class="badge">{$ projects.length $}</span>
                  </div>
                  <div class="proj_grid">
                         <div class="proj_item" ng-repeat=" project in projects ">
-                            <a class="proj_star">
-
+                            <a class="proj_star" ng-class="{true:'fav'}[project.is_star]" ng-click="js_toggle_project_fav(project)">
+                                <i class="star icon" ng-class="{false:'empty'}[project.is_star]"></i>
                             </a>
                             <a class="proj_center" ng-href="/project/{$ project.id $}">
                                     <i ng-class="project.icon" class="icon"></i>

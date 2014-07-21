@@ -28,6 +28,7 @@ urlpatterns += patterns('',
 # 简历管理
 urlpatterns += patterns('',
     url(r'^console/projects$',project.main,name='projects'),
+    url(r'^console/project/(\w+)$',project.project_detail,name='projects'),
 )
 
 
@@ -39,4 +40,5 @@ urlpatterns += patterns('',
     url(r'^resumes/$',dashboard.main),
     url(r'^resume/(\w+)$',dashboard.main),
     url(r'^projects$',dashboard.main),
+    url(r'^project/(\w+)$',dashboard.main),
 )
