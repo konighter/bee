@@ -9,6 +9,51 @@
 
 {% block work_space %}
     <div class="main_panel">
+        <div class="left_panel">
+            <div class="search_bar">
+                <div class="ui action input fluid">
+                    <input type="text">
+
+                    <div class="ui green right labeled button"> 搜索</div>
+                </div>
+            </div>
+            <div class="empty_panel" ng-hide="positions || positions.length > 0">
+                <i class="search icon"></i>
+                <br>
+                <span>
+                    没有匹配的职位
+                </span>
+            </div>
+            <div class="search_list" ng-show="positions || positions.length > 0">
+
+            <div class="ui list tab_list" >
+                 <a ng-repeat="r in positions" class="item" ng-href="{$ r.url $}">
+                    <img class="ui avatar image" ng-src="{$ r.avatar $}">
+                    <div class="content actor">
+                      <div class="header">{$ r.name $}</div>
+                     {$ r.job $}
+                    </div>
+                    <div class="action">
+                         {$ r.resume_name $}
+                    </div>
+                     <div class="right floated datetime">
+                        <div class="ui rating" data-rating="{$ r.level $}">
+                          <i class="icon active"></i>
+                          <i class="icon active"></i>
+                          <i class="icon active"></i>
+                          <i class="icon active"></i>
+                          <i class="icon"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
+        </div>
+        <div class="right_panel">
+            right
+        </div>
+
+    </div>
 
 {% endblock %}

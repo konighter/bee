@@ -12,17 +12,19 @@
         <div class="search_bar">
             <div class="ui action input fluid">
                 <input type="text" placeholder="搜索简历">
-                <div class="ui icon button"><i class="search icon"></i></div>
+                <div class="ui green right labeled button"> 搜索</div>
             </div>
         </div>
-        <div class="search_list" >
-            <div class="empty_list" ng-show="resumes.length <= 0">
+        <div class="empty_panel" ng-hide="resumes || resumes.length > 0">
                 <i class="search icon"></i>
-                <div class="content">
-                    没有匹配的简历,请使用其他关键字搜索
-                </div>
+                <br>
+                <span>
+                    没有匹配的简历
+                </span>
             </div>
-            <div class="ui list tab_list" ng-show="resumes.length > 0">
+        <div class="search_list" ng-show="resumes || resumes.length > 0">
+
+            <div class="ui list tab_list" >
                  <a ng-repeat="r in resumes" class="item" ng-href="{$ r.url $}">
                     <img class="ui avatar image" ng-src="{$ r.avatar $}">
                     <div class="content actor">

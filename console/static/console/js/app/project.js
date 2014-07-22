@@ -46,7 +46,9 @@ angular.module('project',['ngRoute'])
 .controller('ProjectDetailController',['$scope', '$rootScope','$route', '$routeParams', '$location',
         function($scope,$rootScope, $route, $routeParams, $location){
     $rootScope.currentMenu = 'projects';
-     $scope.project =   {id:'nidjfdj23jjkfj234o3uj',name:'某某项目',is_star:false,company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox'};
-
+    $scope.project = {id:'nidjfdj23jjkfj234o3uj',name:'某某项目',is_star:false,company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox'};
+    $scope.positions = [
+        {id:'nidjfdj23jjkfj234o3uj',name:'某某项目',company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox'},
+    ];
 
 }])
