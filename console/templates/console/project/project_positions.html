@@ -1,0 +1,101 @@
+{% extends 'console/work_area.html' %}
+{% block work_ctr %}
+    ng-controller='ProjectDetailController'
+{% endblock %}
+
+{% block a_title %}
+    <h3><i class="icon" ng-class="project.icon"></i> {$ project.name $} </h3>
+{% endblock %}
+
+{% block work_space %}
+    <div class="main_panel">
+        <div class="left_panel">
+            <div class="search_bar">
+                <div class="ui action input fluid">
+                    <input type="text">
+
+                    <div class="ui green right labeled button"> 搜索</div>
+                </div>
+            </div>
+
+
+            <div class="tab_header">
+                <div class="nav_bar_menu">
+                    <a class="item" ng-click="search_tab = 'fav'"
+                       ng-class="{active: search_tab === 'fav' || !search_tab}">
+                        我的收藏
+                    </a>
+                    <a class="item" ng-click="search_tab = 'all'"
+                       ng-class="{active: search_tab === 'all'  }">
+                        全部
+                    </a>
+
+                </div>
+            </div>
+            <div class="content_module" ng-show="search_tab === 'all' ">
+                <div class="empty_panel" ng-hide="positions || positions.length > 0">
+                    <i class="search icon"></i>
+                    <br>
+                <span>
+                    没有匹配的职位
+                </span>
+                </div>
+
+                <div class="ui list tab_list" ng-show="positions || positions.length > 0">
+                    <a ng-repeat="r in positions" class="item" ng-href="{$ r.url $}">
+                        <div class="prefix">
+                            <i class="star icon" ng-class="{false:'empty',true:'fav'}[r.is_fav]" ng-click="r.is_fav=!r.is_fav"></i>
+                        </div>
+
+                        <div class="content actor">
+                          <div class="header">{$ r.company $}</div>
+                         {$ r.principal $}
+                        </div>
+
+                        <div class="action">
+                            {$ r.name $}
+                        </div>
+                        <div class="right floated">
+                               <span class="recommends">20</span>/<span class="interview">20</span>/<span class="offered">20</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="content_module" ng-show="search_tab === 'fav' || !search_tab">
+                <div class="empty_panel" ng-hide="(positions | filter:{is_fav:true}).length > 0">
+                    <i class="search icon"></i>
+                    <br>
+                    <span>
+                        没有匹配的职位
+                    </span>
+                </div>
+                <div class="ui list tab_list" ng-show="(positions | filter:{is_fav:true}).length > 0">
+                    <a ng-repeat="r in positions | filter:{is_fav:true}" class="item" ng-href="{$ r.url $}" ng-click="global.locator.locator_toggle($event,r,'position')">
+                        <div class="prefix">
+                            <i class="star icon" ng-class="{false:'empty',true:'fav'}[r.is_fav]" ng-click="r.is_fav=!r.is_fav"></i>
+                        </div>
+
+                        <div class="content actor">
+                          <div class="header">{$ r.company $}</div>
+                         {$ r.principal $}
+                        </div>
+
+                        <div class="action">
+                            {$ r.name $}
+                        </div>
+                        <div class="right floated">
+                               <span class="recommends">20</span>/<span class="interview">20</span>/<span class="offered">20</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="right_panel">
+            right
+        </div>
+
+    </div>
+
+{% endblock %}

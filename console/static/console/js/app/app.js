@@ -3,9 +3,7 @@
  */
 
 angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','resume','project' ])
-    .run(['$rootScope',function($rootScope){
-        $rootScope.site_title = '欢迎使用Raccoon！！！'
-    }])
+
     .config(['$interpolateProvider', function ($interpolateProvider) {
         $interpolateProvider.startSymbol('{$');
         $interpolateProvider.endSymbol('$}');
@@ -83,4 +81,42 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','re
         }
 
 
-    }]);
+    }])
+    .controller('locatorController',['$scope','$rootScope','$location', function ($scope,$rootScope,$location) {
+        $scope.template = {
+            url:$rootScope.global.locator.template(),
+            entry:{id:'nidjfdj23jjkfj234o3uj',name:'高级产品总监',company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox',is_fav:true},
+        }
+        console.log('init')
+
+    }])
+    .run(['$rootScope',function($rootScope){
+        $rootScope.site_title = '欢迎使用Raccoon！！！'
+        $rootScope.global = {
+            locator:{
+                show:false,
+                url:'',
+                type:'',
+                template:function(){
+                    switch (this.type) {
+                        case 'position':
+                            return '/tpl/project/position';
+                        default:
+                            return '/tpl/project/position';
+                    }
+                },
+                locator_toggle:function(event,entry,type){
+                    this.type = type;
+                    this.url = '/api/'+type+'/'+entry.id;
+                    this.show = true;
+                },
+                locator_close:function(){
+                    console.log('locator.close')
+                    this.type = '';
+                    this.url = '';
+                    this.show = false;
+                }
+            }
+        }
+
+    }])

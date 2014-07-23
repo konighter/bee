@@ -25,10 +25,13 @@ urlpatterns += patterns('',
     url(r'^console/resume/(\w+)$',resume.resume_detail,name='resume_detail'),
 )
 
-# 简历管理
+# 项目管理
 urlpatterns += patterns('',
     url(r'^console/projects$',project.main,name='projects'),
-    url(r'^console/project/(\w+)$',project.project_detail,name='projects'),
+    url(r'^console/project/(\w+)$',project.project_positions,name='projects'),
+# 模版
+
+    url(r'^tpl/project/position$',project.tpl_position_slide,name='projects'),
 )
 
 

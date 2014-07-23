@@ -48,7 +48,11 @@ angular.module('project',['ngRoute'])
     $rootScope.currentMenu = 'projects';
     $scope.project = {id:'nidjfdj23jjkfj234o3uj',name:'某某项目',is_star:false,company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox'};
     $scope.positions = [
-        {id:'nidjfdj23jjkfj234o3uj',name:'某某项目',company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox'},
+        {id:'nidjfdj23jjkfj234o3uj',name:'高级产品总监',company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox',is_fav:false},
+        {id:'nidjfdj23jjkfj234o3uj',name:'高级产品总监',company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox',is_fav:false},
+        {id:'nidjfdj23jjkfj234o3uj',name:'高级产品总监',company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox',is_fav:true},
+        {id:'nidjfdj23jjkfj234o3uj',name:'高级产品总监',company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox',is_fav:true},
+        {id:'nidjfdj23jjkfj234o3uj',name:'高级产品总监',company:'某某公司',principal:'李某某',cust_client:'李经历',icon:'inbox',is_fav:true},
     ];
 
 }])

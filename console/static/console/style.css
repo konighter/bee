@@ -18,12 +18,20 @@
     src: url(./font/DancingScript.woff) format('woff');
 }
 
+/*@font-face {*/
+    /*font-family: 'Playball';*/
+    /*font-style: normal;*/
+    /*font-weight: 400;*/
+    /*src: url(./font/Playball.woff) format('woff');*/
+/*}*/
+
 @font-face {
-    font-family: 'Playball';
-    font-style: normal;
-    font-weight: 400;
-    src: url(./font/Playball.woff) format('woff');
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(./font/Raleway.woff) format('woff');
 }
+
 
 * {
     box-sizing: border-box;
@@ -36,7 +44,7 @@ body {
 }
 
 body {
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "Raleway","Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     background: #FFFFFF;
     margin: 0px;
     padding: 0px;
@@ -299,6 +307,7 @@ header .logo {
 .work_area .work_space .space .space_header, .tab_header {
     padding: 0px 15px;
     border-bottom: 1px solid #e1e1e1;
+    width: auto;
 }
 
 .work_area .right_sidebar {
@@ -363,6 +372,31 @@ header .logo {
 
 .tab_list .item .datetime {
     margin-right: 25px;
+}
+.tab_list .item .prefix {
+    display: block;
+    width: 2em;
+    height: 2em;
+    float: left;
+    margin-right: 1em;
+    vertical-align: middle;
+    text-align: center;
+   
+}
+
+span.recommends{
+    color: red !important;
+    margin: 0px 10px;
+}
+
+span.interview {
+    color: lightskyblue !important;
+    margin: 0px 10px;
+}
+
+span.offered {
+    color: lightgreen !important;
+   margin: 0px 10px;
 }
 
 .tab_box a {
@@ -597,7 +631,7 @@ header .logo {
 }
 
 .content_module .content {
-    padding-left: 10%;
+    /*padding-left: 10%;*/
 }
 
 .experience {
@@ -732,6 +766,11 @@ header .logo {
     visibility: visible;
 }
 
+.fav.star.icon {
+    color: #FFCB08 !important;
+    visibility: visible;
+}
+
 .main_panel .left_panel {
 
     margin-right: 240px;
@@ -747,6 +786,63 @@ header .logo {
     right: 0px;
     height: 100%;
 
+}
+
+.locator_right_content{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 0px;
+    display: none;
+    border-left: solid 1px #e1e1e1;
+    -webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.10);
+    background: #f9f9f7;
+}
+
+.locator_right_content.show {
+    display:block;
+    width: 800px;
+     -webkit-transition: all 10s;-moz-transition: all 10s;-ms-transition: all 10s;-o-transition: all 10s;transition: all 10s;
+}
+.locator_header {
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    overflow: hidden;
+    border-bottom: solid 1px #e1e1e1;
+}
+
+.locator_header h3 {
+    display: inline-block;
+}
+
+.locator_header .meta {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.locator_header .close {
+    display: inline-block;
+    float: right;
+    padding:15px 20px;
+    cursor: pointer;
+    border-left: solid 1px #e1e1e1;
+    z-index: 100;
+}
+
+.locator_header .close:before {
+    content: 'X';
+}
+
+.locator_body {
+    padding-top: 10px;
+    padding-left: 15px;
 }
 /*@media {*/
 

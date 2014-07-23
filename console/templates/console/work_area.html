@@ -24,5 +24,8 @@
         </div>
     </div>
 {% endblock %}
+<div ng-controller="locatorController" class="locator_right_content show fadeInRight" ng-if="global.locator.show">
 
+            <div ng-include="template.url"></div>
+</div>
 </div>
