@@ -3,29 +3,34 @@
         {% block area_title %}
 
             <div class="title">
-              {% block a_title %}  <h3><i class="dashboard icon"></i>工作台 </h3> {% endblock %}
+                {% block a_title %}  <h3><i class="dashboard icon"></i>工作台 </h3> {% endblock %}
             </div>
             {% block nav_menu %}
-{#            <div class="right floated nav_bar_menu ">#}
-{##}
-{#                <a class="item active">任务</a>#}
-{#                <a class="item">文件</a>#}
-{#                <a class="item">话题</a>#}
-{#                <a class="item">文档</a>#}
-{##}
-{#            </div>#}
-             {% endblock %}
+                {#            <div class="right floated nav_bar_menu ">#}
+                {##}
+                {#                <a class="item active">任务</a>#}
+                {#                <a class="item">文件</a>#}
+                {#                <a class="item">话题</a>#}
+                {#                <a class="item">文档</a>#}
+                {##}
+                {#            </div>#}
+            {% endblock %}
         {% endblock %}
     </div>
- {% block work_space %}
-    <div class="work_space">
-        <div class="space">
+    {% block work_space %}
+        <div class="work_space">
+            <div class="space">
 
+            </div>
+        </div>
+    {% endblock %}
+    <div ng-if="global.locator.show">
+        <div class="overlay" ng-click="global.locator.locator_close()"></div>
+        <div ng-controller="locatorController" class="locator_right_content show fadeInRight" >
+
+
+            <div ng-include="template.url">
+            </div>
         </div>
     </div>
-{% endblock %}
-<div ng-controller="locatorController" class="locator_right_content show fadeInRight" ng-if="global.locator.show">
-
-            <div ng-include="template.url"></div>
-</div>
 </div>

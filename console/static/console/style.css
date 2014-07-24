@@ -339,6 +339,7 @@ header .logo {
 }
 
 .tab_list .item {
+    position: relative;
     padding: 10px 0px;
     line-height: 15px;
     border-bottom: 1px solid #e1e1e1;
@@ -364,6 +365,7 @@ header .logo {
     white-space: nowrap;
     text-overflow: ellipsis;
     margin-right: 25px;
+    margin-left: 3em;
 }
 
 .tab_list .item .action {
@@ -374,6 +376,9 @@ header .logo {
     margin-right: 25px;
 }
 .tab_list .item .prefix {
+    position: absolute;
+    top: .5em;
+    left: 0;
     display: block;
     width: 2em;
     height: 2em;
@@ -381,7 +386,18 @@ header .logo {
     margin-right: 1em;
     vertical-align: middle;
     text-align: center;
-   
+    z-index: 200;
+}
+
+.tab_list .item select {
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #e1e1e1;
+    background:#f9f9f7 ;
+}
+
+.tab_list .item select option {
+    padding: 20px 20px;
 }
 
 span.recommends{
@@ -617,21 +633,34 @@ span.offered {
     padding-bottom: 10px;
 }
 
+.module_hr {
+    border: 1px solid #e1e1e1;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+}
 .content_module {
     margin-left: 10px;
     margin-top: 20px;
 
 }
+.content_module .tab_header .nav_bar_menu .item{
+    padding-bottom: 15px;
+}
 
 .content_module .content_header {
     font-size: 20px;
     font-weight: bold;
-    background: #8a959e;
     padding-left: 10px;
+    /*color: #d84c31;*/
+}
+.content_module .content_header.red {
+    color: #d84c31;
 }
 
-.content_module .content {
-    /*padding-left: 10%;*/
+
+.content_module > .content {
+   padding:10px;
 }
 
 .experience {
@@ -799,6 +828,18 @@ span.offered {
     -webkit-box-shadow: 0 0px 15px rgba(0, 0, 0, 0.10);
     box-shadow: 0 0px 15px rgba(0, 0, 0, 0.10);
     background: #f9f9f7;
+    z-index: 900;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: 899;
+    background: rgba(0, 0, 0, 0.10);
 }
 
 .locator_right_content.show {
@@ -841,8 +882,7 @@ span.offered {
 }
 
 .locator_body {
-    padding-top: 10px;
-    padding-left: 15px;
+    padding:10px;
 }
 /*@media {*/
 

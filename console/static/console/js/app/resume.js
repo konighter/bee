@@ -82,3 +82,16 @@ angular.module('resume',['ngRoute'])
     }
 
 }])
+.controller('ResumePositionController',['$scope', '$rootScope','$route', '$routeParams', '$location',
+        function($scope,$rootScope, $route, $routeParams, $location){
+      $scope.options = [{label:'已推荐',value:'RECOMMEND'},
+                        {label:'面试中',value:'INTERVIEW'},
+                        {label:'offer',value:'OFFER'},
+                        {label:'已入职',value:'ONJOB'},
+                        {label:'已回款',value:'FINISHED'},
+      ];
+      $scope.change_resume_progress = function(resume,position,new_progress){
+
+      }
+
+}])
