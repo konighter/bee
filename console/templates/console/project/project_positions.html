@@ -71,7 +71,7 @@
                     </span>
                 </div>
                 <div class="ui list tab_list" ng-show="(positions | filter:{is_fav:true}).length > 0">
-                    <a ng-repeat="r in positions | filter:{is_fav:true}" class="item" ng-href="{$ r.url $}" ng-click="global.locator.locator_toggle($event,r.id,'position')">
+                    <a ng-repeat="r in positions | filter:{is_fav:true}" class="item" ng-href="{$ r.url $}" ng-click="global.locator.locator_toggle($event,r,'position')">
                         <div class="prefix">
                             <i class="star icon" ng-class="{false:'empty',true:'fav'}[r.is_fav]" ng-click="r.is_fav=!r.is_fav"></i>
                         </div>

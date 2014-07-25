@@ -1,85 +1,175 @@
-<div class="locator_header">
-    <h3>
-        <i class="icon {$ template.entry.icon $}"></i>
-        {$ template.entry.name $}
-    </h3>
+<div ng-controller="PositionController" style="height: 100%;overflow-y: auto">
+    <div class="locator_header">
+        <h3>
+            <i class="icon {$ position.icon $}"></i>
+            {$ position.name $}
+        </h3>
 
-    <div class="meta">
-        <i class="star icon" ng-class="{true:'fav',false:'empty'}[template.entry.is_fav]"></i>
-    </div>
-    <div class="meta">
-
-    </div>
-    <div class="close" ng-click="global.locator.locator_close()"></div>
-</div>
-<div class="locator_body">
-
-    <div class="content_module">
-        <div class="content_header">
-            <i class="tint icon"></i> 职位描述
+        <div class="meta">
+            <i class="star icon" ng-class="{true:'fav',false:'empty'}[position.is_fav]"></i>
         </div>
-        <div class="content">
-            <p>
-                {$ template.entry.position_desc $}
-            </p>
-        </div>
-    </div>
-    <hr class="module_hr"/>
+        <div class="meta">
 
-    <div class="content_module" ng-show="template.entry.resumes.length > 0">
-        <div class="tab_header">
-            <div class="nav_bar_menu">
-                <a class="item" ng-click="position_tab = 'RECOMMEND'"
-                   ng-class="{active: position_tab === 'RECOMMEND' || !position_tab}">
-                    已推荐
-                </a>
-                <a class="item" ng-click="position_tab = 'INTERVIEW'"
-                   ng-class="{active: position_tab === 'INTERVIEW'  }">
-                    面试中
-                </a>
-                <a class="item" ng-click="position_tab = 'OFFER'"
-                   ng-class="{active: position_tab === 'OFFER'  }">
-                    offer
-                </a>
-                <a class="item" ng-click="position_tab = 'ONJOB'"
-                   ng-class="{active: position_tab === 'ONJOB'  }">
-                    已入职
-                </a>
-                <a class="item" ng-click="position_tab = 'FINISHED'"
-                   ng-class="{active: position_tab === 'FINISHED'  }">
-                    已回款
-                </a>
+        </div>
+        <div class="close" ng-click="global.locator.locator_close()"></div>
+    </div>
+    <div class="locator_body">
+
+        <div class="content_module">
+            <div class="content_header">
+                <i class="tint icon"></i> 职位描述
+            </div>
+            <div class="content">
+                <p>
+                    {$ position.position_desc $}
+                </p>
             </div>
         </div>
-        {#            已推荐的简历   #}
-        <div class="content_module" ng-show="position_tab === 'RECOMMEND' || !position_tab">
-            <div class="ui list tab_list" >
-                 <a ng-repeat="r in template.entry.resumes | filter:{progress:'RECOMMEND'} | orderBy: 'date'" class="item" ng-controller="ResumePositionController" ng-click="model_event(r,'resume_position_recommend',$event)">
+        <hr class="module_hr"/>
 
-                     <img class="ui avatar image" ng-src="{$ r.avatar $}">
-                    <div class="content actor">
-                      <div class="header">{$ r.candidate $}</div>
-                     {$ r.title $}
-                    </div>
-                    <div class="action">
-                         {$ r.base_info $}
-                    </div>
-                    <div class="right floated datetime">
-                        {$ r.operator.name $}/{$ r.date | date:'yyyy-MM-dd' $}
-
-                    </div>
-                </a>
+        <div class="content_module position_resumes" ng-show="position.resumes.length > 0">
+            <div class="tab_header">
+                <div class="nav_bar_menu">
+                    <a class="item" ng-click="position_tab = 'RECOMMEND'"
+                       ng-class="{active: position_tab === 'RECOMMEND' || !position_tab}">
+                        已推荐
+                    </a>
+                    <a class="item" ng-click="position_tab = 'INTERVIEW'"
+                       ng-class="{active: position_tab === 'INTERVIEW'  }">
+                        面试中
+                    </a>
+                    <a class="item" ng-click="position_tab = 'OFFER'"
+                       ng-class="{active: position_tab === 'OFFER'  }">
+                        offer
+                    </a>
+                    <a class="item" ng-click="position_tab = 'ONJOB'"
+                       ng-class="{active: position_tab === 'ONJOB'  }">
+                        已入职
+                    </a>
+                    <a class="item" ng-click="position_tab = 'FINISHED'"
+                       ng-class="{active: position_tab === 'FINISHED'  }">
+                        已回款
+                    </a>
+                </div>
             </div>
+            {#            已推荐的简历   #}
+            <div class="content_module" ng-show="position_tab === 'RECOMMEND' || !position_tab">
+                <div class="ui list tab_list">
+                    <a ng-repeat="r in position.resumes | filter:{progress:'RECOMMEND'} | orderBy: 'date'"
+                       class="item" ng-click="js_show_popbox($event,r)">
 
+                        <img class="ui avatar image" ng-src="{$ r.avatar $}">
+
+                        <div class="content">
+                            <div class="header">{$ r.candidate $}</div>
+                            {$ r.title $}
+                        </div>
+                        <div class="action">
+                            {$ r.base_info $}
+                        </div>
+                        <div class="right floated datetime">
+                            {$ r.operator.name $}/{$ r.date | date:'yyyy-MM-dd' $}
+
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            {#            面试中简历   #}
+            <div class="content_module" ng-show="position_tab === 'INTERVIEW'">
+                <div class="ui list tab_list">
+                    <a ng-repeat="r in position.resumes | filter:{progress:'INTERVIEW'} | orderBy: 'date'"
+                       class="item" ng-click="js_show_popbox($event,r)">
+
+                        <img class="ui avatar image" ng-src="{$ r.avatar $}">
+
+                        <div class="content">
+                            <div class="header">{$ r.candidate $}</div>
+                            {$ r.title $}
+                        </div>
+                        <div class="action">
+                            {$ r.base_info $}
+                        </div>
+                        <div class="right floated datetime">
+                            {$ r.operator.name $}/{$ r.date | date:'yyyy-MM-dd' $}
+
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            {#            接offer简历   #}
+            <div class="content_module" ng-show="position_tab === 'OFFER'">
+                <div class="ui list tab_list">
+                    <a ng-repeat="r in position.resumes | filter:{progress:'OFFER'} | orderBy: 'date'"
+                       class="item" ng-click="js_show_popbox($event,r)">
+
+                        <img class="ui avatar image" ng-src="{$ r.avatar $}">
+
+                        <div class="content">
+                            <div class="header">{$ r.candidate $}</div>
+                            {$ r.title $}
+                        </div>
+                        <div class="action">
+                            {$ r.base_info $}
+                        </div>
+                        <div class="right floated datetime">
+                            {$ r.operator.name $}/{$ r.date | date:'yyyy-MM-dd' $}
+
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            {#            入职简历   #}
+            <div class="content_module" ng-show="position_tab === 'ONJOB'">
+                <div class="ui list tab_list">
+                    <a ng-repeat="r in position.resumes | filter:{progress:'ONJOB'} | orderBy: 'date'"
+                       class="item" ng-click="js_show_popbox($event,r)">
+
+                        <img class="ui avatar image" ng-src="{$ r.avatar $}">
+
+                        <div class="content">
+                            <div class="header">{$ r.candidate $}</div>
+                            {$ r.title $}
+                        </div>
+                        <div class="action">
+                            {$ r.base_info $}
+                        </div>
+                        <div class="right floated datetime">
+                            {$ r.operator.name $}/{$ r.date | date:'yyyy-MM-dd' $}
+
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            {#            已回款简历   #}
+            <div class="content_module" ng-show="position_tab === 'FINISHED'">
+                <div class="ui list tab_list">
+                    <a ng-repeat="r in position.resumes | filter:{progress:'FINISHED'} | orderBy: 'date'"
+                       class="item" ng-click="js_show_popbox($event,r)">
+
+                        <img class="ui avatar image" ng-src="{$ r.avatar $}">
+
+                        <div class="content">
+                            <div class="header">{$ r.candidate $}</div>
+                            {$ r.title $}
+                        </div>
+                        <div class="action">
+                            {$ r.base_info $}
+                        </div>
+                        <div class="right floated datetime">
+                            {$ r.operator.name $}/{$ r.date | date:'yyyy-MM-dd' $}
+
+                        </div>
+                    </a>
+                </div>
+
+            </div>
         </div>
 
-
-
-
-
-
-
-
     </div>
-
 </div>
+
+

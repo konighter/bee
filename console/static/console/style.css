@@ -367,7 +367,9 @@ header .logo {
     margin-right: 25px;
     margin-left: 3em;
 }
-
+.tab_list .item .content {
+    margin-right: 25px;
+}
 .tab_list .item .action {
     display: inline-block;
 }
@@ -883,6 +885,10 @@ span.offered {
 
 .locator_body {
     padding:10px;
+}
+
+.position_resumes {
+
 }
 /*@media {*/
 
