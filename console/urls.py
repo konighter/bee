@@ -1,6 +1,6 @@
 #coding=utf-8
 from django.conf.urls import patterns, url
-from console.views import dashboard,explore,resume ,project
+from console.views import dashboard,explore,resume,project
 
 #dashboard
 urlpatterns = patterns('',
@@ -37,7 +37,7 @@ urlpatterns += patterns('',
 
 # 首页
 urlpatterns += patterns('',
-    url(r'^console/$',dashboard.main),
+    url(r'^console/$',dashboard.main,name='console'),
     url(r'^dashboard/$',dashboard.main),
     url(r'^explore/$',dashboard.main),
     url(r'^resumes/$',dashboard.main),

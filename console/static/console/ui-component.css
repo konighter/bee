@@ -2,9 +2,11 @@
 
 /*pop-box*/
 
+
+
 .pop_box {
-    position: absolute;
-    z-index: 1229;
+    position: fixed;
+    z-index: 800;
     min-width: 240px;
     max-width: 400px;
     padding: 1px;
@@ -18,6 +20,10 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     background-clip: padding-box;
     outline: none;
+}
+
+.pop_content{
+    z-index: 100;
 }
 
 .pop_box_header {
@@ -63,4 +69,12 @@
 }
 .pop_box_action .ui.buttons {
     float: right;
+}
+
+.pop_dropback {
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    width: 100%;
 }

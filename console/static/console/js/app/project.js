@@ -1,7 +1,7 @@
 /**
  * Created by carvee on 14-7-17.
  */
-angular.module('project',['ngRoute'])
+angular.module('project',['ngRoute','ui.bootstrap'])
 .controller('ProjectsController',['$scope', '$rootScope','$route', '$routeParams', '$location',
         function($scope,$rootScope, $route, $routeParams, $location){
     $rootScope.currentMenu = 'projects';
@@ -56,8 +56,8 @@ angular.module('project',['ngRoute'])
     ];
 }])
 
-.controller('PositionController',['$scope', '$rootScope','$route', '$routeParams', '$location','$pobBox',
-        function($scope,$rootScope, $route, $routeParams, $location ,$pobBox){
+.controller('PositionController',['$scope', '$rootScope','$route', '$routeParams', '$location','$modal',
+        function($scope,$rootScope, $route, $routeParams, $location ,$modal){
         var position = $rootScope.global.locator.entry;
         console.log(position)
 
@@ -87,15 +87,9 @@ angular.module('project',['ngRoute'])
                 ]
             }
 
-      $scope.book_interview = function(entry){
-          console.log(entry)
-          console.log('book interview')
-          entry.progress = 'INTERVIEW';
-          // 更新候选人状态
 
 
-          $pobBox.close();
-      }
+//      $scope.
 
       $scope.position_options = [{label:'已推荐',value:'RECOMMEND'},
                         {label:'面试中',value:'INTERVIEW'},
@@ -105,12 +99,11 @@ angular.module('project',['ngRoute'])
       ];
 
       $scope.js_show_popbox = function(event,r){
-         $pobBox.open({
-             scope:$scope,
-             target:event,
-             templateUrl:'get_interview.html',
-             entry:r
-         });
+//         $modal.open({
+//
+//             templateUrl :'/position/interview.html'
+//
+//         });
       }
 
 

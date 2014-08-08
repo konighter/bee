@@ -59,7 +59,7 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','re
 
     }])
 
-    .controller('sidebar_nav', ['$scope','$rootScope','$location', function ($scope,$rootScope,$location) {
+    .controller('sidebar_nav', ['$scope','$rootScope','$location','$document', function ($scope,$rootScope,$location,$document ) {
         $scope.menus = [
             {title: '工作台', code: 'dashboard', url: '/dashboard', icon: 'dashboard', 'active': true},
             {title: '发现', code: 'explore', url: '/explore', icon: 'calendar'},
@@ -79,6 +79,7 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','re
         $scope.js_sidebar_collapse = function(){
             $scope.if_collapse = !$scope.if_collapse;
         }
+
 
 
     }])
@@ -120,13 +121,6 @@ angular.module('bee_console', ['ngRoute','cached_temp','dashboard','explore','re
                 }
             }
         };
-
-
-
-
-
-
-
 
 
     }])

@@ -56,11 +56,11 @@
             <div class="content_module" ng-show="position_tab === 'RECOMMEND' || !position_tab">
                 <div class="ui list tab_list">
                     <a ng-repeat="r in position.resumes | filter:{progress:'RECOMMEND'} | orderBy: 'date'"
-                       class="item" ng-click="js_show_popbox($event,r)">
+                       class="item" ng-right-click="js_show_popbox($event,r)">
 
                         <img class="ui avatar image" ng-src="{$ r.avatar $}">
 
-                        <div class="content">
+                        <div class="content actor">
                             <div class="header">{$ r.candidate $}</div>
                             {$ r.title $}
                         </div>
@@ -79,11 +79,11 @@
             <div class="content_module" ng-show="position_tab === 'INTERVIEW'">
                 <div class="ui list tab_list">
                     <a ng-repeat="r in position.resumes | filter:{progress:'INTERVIEW'} | orderBy: 'date'"
-                       class="item" ng-click="js_show_popbox($event,r)">
+                       class="item" ng-right-click="js_show_popbox($event,r)">
 
                         <img class="ui avatar image" ng-src="{$ r.avatar $}">
 
-                        <div class="content">
+                        <div class="content actor">
                             <div class="header">{$ r.candidate $}</div>
                             {$ r.title $}
                         </div>
@@ -102,11 +102,11 @@
             <div class="content_module" ng-show="position_tab === 'OFFER'">
                 <div class="ui list tab_list">
                     <a ng-repeat="r in position.resumes | filter:{progress:'OFFER'} | orderBy: 'date'"
-                       class="item" ng-click="js_show_popbox($event,r)">
+                       class="item" ng-right-click="js_show_popbox($event,r)">
 
                         <img class="ui avatar image" ng-src="{$ r.avatar $}">
 
-                        <div class="content">
+                        <div class="content actor">
                             <div class="header">{$ r.candidate $}</div>
                             {$ r.title $}
                         </div>
@@ -125,11 +125,11 @@
             <div class="content_module" ng-show="position_tab === 'ONJOB'">
                 <div class="ui list tab_list">
                     <a ng-repeat="r in position.resumes | filter:{progress:'ONJOB'} | orderBy: 'date'"
-                       class="item" ng-click="js_show_popbox($event,r)">
+                       class="item" ng-right-click="js_show_popbox($event,r)">
 
                         <img class="ui avatar image" ng-src="{$ r.avatar $}">
 
-                        <div class="content">
+                        <div class="content actor">
                             <div class="header">{$ r.candidate $}</div>
                             {$ r.title $}
                         </div>
@@ -148,11 +148,11 @@
             <div class="content_module" ng-show="position_tab === 'FINISHED'">
                 <div class="ui list tab_list">
                     <a ng-repeat="r in position.resumes | filter:{progress:'FINISHED'} | orderBy: 'date'"
-                       class="item" ng-click="js_show_popbox($event,r)">
+                       class="item" ng-right-click="js_show_popbox($event,r)">
 
                         <img class="ui avatar image" ng-src="{$ r.avatar $}">
 
-                        <div class="content">
+                        <div class="content actor">
                             <div class="header">{$ r.candidate $}</div>
                             {$ r.title $}
                         </div>
